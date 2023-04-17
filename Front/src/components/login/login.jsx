@@ -34,7 +34,7 @@ function Login() {
 
             console.log(storedToken)
 
-            setUsername('')
+            setUsername(user.username)
             setPassword('')
             setSuccess(true)
 
@@ -58,6 +58,9 @@ function Login() {
                     <div className='success d-flex container justify-content-center mt-7'>
                         <div className="d-flex flex-column align-items-center">
                             <h2>¡Has iniciado sesión!</h2>
+                            <p>Bienvenido, {username}!</p>
+
+
                             <a href='/Discovery' className='btn-login btnAzul'>Comienza tu aventura</a>
                         </div>
                     </div>
