@@ -5,6 +5,7 @@ import Ubicacion from '../images/mapa.gif'
 import Parallax from "./Parallax";
 import "./Home.css";
 import Register from '../registro/register';
+// import CookieBanner from '../cookies/cookies';
 
 
 
@@ -19,9 +20,12 @@ function Home() {
   return (
     <>
 
-  {showParallax && <Parallax />}
+{showParallax && <Parallax />}
+      {showRegister ? (
+        <Register />
+      ) : (
       <div className="sec">
-      {!showRegister && (
+    
         <div className="container">
 
           <div className="textoInicio">
@@ -33,6 +37,7 @@ function Home() {
           </div>
 
           <div className="steps pasos">
+
             <div className="step1">
               <img src={Ubicacion} alt="" />
               <h3>Ubícate en el mapa</h3>
@@ -50,13 +55,13 @@ function Home() {
           </div>
 
           <div className="containerFlex">
-            <button className="greenbtn" onClick={handleEmpezarClick}>Empezar</button>
+          <button className="greenbtn" onClick={handleEmpezarClick}>Empezar</button>
+          </div>
           </div>
         </div>
+        
       )}
-      {showRegister && <Register />}
-      </div>
     </>
-  )
+  );
 }
 export default Home;

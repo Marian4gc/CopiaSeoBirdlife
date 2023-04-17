@@ -22,3 +22,7 @@
 .success h2 {
     width: 100%;
 }
+
+.mt-7 {
+    margin-top: 7rem!important;
+}

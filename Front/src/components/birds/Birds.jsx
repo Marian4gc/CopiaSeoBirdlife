@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './birds.css'
 import axios from 'axios';
-// import GorrionIzquierda from '../images/gorrionIzquierda.png';
-// import GorrionDerecha from '../images/gorrionDerecha.png';
-
+import PetirojoIzquierda from '../images/petirojoIzq.png';
+import PetirojoDerecha from '../images/petirojoDcha.png';
 import Song from './Song'
 
 
@@ -104,10 +103,10 @@ function Birds() {
     return (
         <>
             <div className="container px-4 py-5" id="hanging-icons">
-                <div className="d-flex justify-content-center encabezadoGeneral">
-                    {/* <img src={GorrionIzquierda} id="gorrionIz" /> */}
+                <div className="d-flex justify-content-around encabezadoGeneral">
+                <img src={PetirojoIzquierda} id="gorrionIz" />
                     <h1>Sigue la pista de las aves</h1>
-                    {/* <img src={GorrionDerecha} id="gorrionDer" /> */}
+                <img src={PetirojoDerecha} id="gorrionDer" />
                 </div>
                 <h2 className="pb-2 border-bottom">Aves</h2>
                 <div className="row">
@@ -137,7 +136,6 @@ function Birds() {
                                                 {int.description}
                                             </p>
                                             <div className="d-grid gap-2 d-md-flex justify-content-md-end mb-4 mb-lg-3">
-                                                <Song song={int.song} />
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     width="40"
                                                     height="40"
@@ -147,6 +145,7 @@ function Birds() {
                                                     onClick={() => handleLike(index)}>
                                                     <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
                                                 </svg>
+                                                <Song song={int.song} />
                                                 <button
                                                     type="button"
                                                     className="btn btn-primary btn-lg btn-sm px-4 gap-3 info"

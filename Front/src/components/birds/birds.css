@@ -6,11 +6,7 @@
 
 }
 
-@media (max-width: 768px) {
-    .card-img {
-        margin: 0;
-    }
-}
+
 
 .card-img img {
     max-width: 100%;
@@ -36,16 +32,46 @@
 
 .cosa {
     margin-right: 2px !important;
+    align-items: stretch;
 }
 
-.bi,
-.bi-suit-heart-fill {
-    align-self: center;
-    margin-right: 7px;
+.cosa img {
+    max-width: 300px;
+    height: auto;
+    margin-left: 10px;
 }
 
 .encabezadoGeneral h1 {
     padding: 12px;
     color: #52575B;
     font-size: 3.5rem;
+}
+
+.card-text {
+    font-size: 0.95rem
+}
+
+.card-body h3 {
+    color: #52575B;
+}
+
+.encabezadoGeneral img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card-img {
+        margin: 0;
+
+    }
+
+    .encabezadoGeneral h1 {
+        padding: 12px;
+        color: #52575B;
+        font-size: 2rem;
+    }
+
+    .encabezadoGeneral img {
+        max-width: 50%;
+    }
 }

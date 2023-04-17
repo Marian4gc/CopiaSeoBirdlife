@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import axios from '../../api/axios';
 import './login.css';
 import Logo from '../images/logoAventurero.png';
-import GolondrinaL from '../images/birdLeft.png';
-import GolondrinaR from '../images/birdRight.png';
+import GolondrinaL from '../images/golondrinaLeft.png';
+import GolondrinaR from '../images/golondrinaRight.png';
 
 const LOGIN_URL = '/api/login_check';
 
@@ -55,7 +55,7 @@ function Login() {
                     <img src={GolondrinaR} id="bird2" />
                 </header>
                 {success ? (
-                    <div className='success d-flex container justify-content-center'>
+                    <div className='success d-flex container justify-content-center mt-7'>
                         <div className="d-flex flex-column align-items-center">
                             <h2>¡Has iniciado sesión!</h2>
                             <a href='/Discovery' className='btn-login btnAzul'>Comienza tu aventura</a>
