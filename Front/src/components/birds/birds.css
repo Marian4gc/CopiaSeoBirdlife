@@ -3,12 +3,12 @@
     height: auto;
     display: block;
     margin: auto;
-     /* Centra horizontalmente la imagen en pantallas grandes */
+
 }
 
 @media (max-width: 768px) {
     .card-img {
-      margin: 0; /* Elimina el margen horizontal en pantallas pequeñas */
+        margin: 0;
     }
 }
 
@@ -17,7 +17,7 @@
     height: auto;
     display: block;
     margin: auto;
-    margin-left: 10px; /* Agregar margen a la izquierda */
+    margin-left: 10px;
 }
 
 .heart-fill-red {
@@ -31,8 +31,21 @@
 
 .info {
     background-color: #6BC047 !important;
+    border: none;
 }
 
 .cosa {
     margin-right: 2px !important;
+}
+
+.bi,
+.bi-suit-heart-fill {
+    align-self: center;
+    margin-right: 7px;
+}
+
+.encabezadoGeneral h1 {
+    padding: 12px;
+    color: #52575B;
+    font-size: 3.5rem;
 }

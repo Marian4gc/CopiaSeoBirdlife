@@ -3,9 +3,12 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
@@ -26,6 +29,27 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     #[ORM\Column]
     private ?string $password = null;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Totaldata::class)]
+    private Collection $totaldatas;
+
+    #[ORM\ManyToMany(targetEntity: Birds::class, inversedBy: 'users')]
+    private Collection $birds;
+
+    #[ORM\ManyToMany(targetEntity: Plant::class, inversedBy: 'users')]
+    private Collection $plant;
+
+    #[ORM\ManyToMany(targetEntity: Insect::class, inversedBy: 'users')]
+    private Collection $insect;
+
+    public function __construct()
+    {
+        $this->totaldatas = new ArrayCollection();
+        $this->birds = new ArrayCollection();
+        $this->plant = new ArrayCollection();
+        $this->insect = new ArrayCollection();
+    }
+
 
     public function getId(): ?int
     {
@@ -110,4 +134,112 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
     }
+
+    /**
+     * @return Collection<int, Totaldata>
+     */
+    public function getTotaldatas(): Collection
+    {
+        return $this->totaldatas;
+    }
+
+    public function addTotaldata(Totaldata $totaldata): self
+    {
+        if (!$this->totaldatas->contains($totaldata)) {
+            $this->totaldatas->add($totaldata);
+            $totaldata->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTotaldata(Totaldata $totaldata): self
+    {
+        if ($this->totaldatas->removeElement($totaldata)) {
+            // set the owning side to null (unless already changed)
+            if ($totaldata->getUser() === $this) {
+                $totaldata->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Birds>
+     */
+    public function getBirds(): Collection
+    {
+        return $this->birds;
+    }
+
+    public function addBird(Birds $bird): self
+    {
+        if (!$this->birds->contains($bird)) {
+            $this->birds->add($bird);
+        }
+
+        return $this;
+    }
+
+    public function removeBird(Birds $bird): self
+    {
+        $this->birds->removeElement($bird);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Plant>
+     */
+    public function getPlant(): Collection
+    {
+        return $this->plant;
+    }
+
+    public function addPlant(Plant $plant): self
+    {
+        if (!$this->plant->contains($plant)) {
+            $this->plant->add($plant);
+        }
+
+        return $this;
+    }
+
+    public function removePlant(Plant $plant): self
+    {
+        $this->plant->removeElement($plant);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Insect>
+     */
+    public function getInsect(): Collection
+    {
+        return $this->insect;
+    }
+
+    public function addInsect(Insect $insect): self
+    {
+        if (!$this->insect->contains($insect)) {
+            $this->insect->add($insect);
+        }
+
+        return $this;
+    }
+
+    public function removeInsect(Insect $insect): self
+    {
+        $this->insect->removeElement($insect);
+
+        return $this;
+    }
+
+    // public function __toString() {
+    //     return $this->getUsername(); 
+    // }
+
+    
 }

@@ -17,6 +17,7 @@ class BirdsType extends AbstractType
             ->add('image')
             ->add('link')
             ->add('song')
+            // ->add('users')
         ;
     }
 

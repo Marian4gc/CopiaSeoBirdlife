@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\BirdsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: BirdsRepository::class)]
@@ -17,16 +19,28 @@ class Birds
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $description = '';
+    private ?string $description = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $image = '';
+    private ?string $image = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $link = '';
+    private ?string $link = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $song = '';
+    private ?string $song = null;
+
+    #[ORM\OneToMany(mappedBy: 'birds', targetEntity: Totaldata::class)]
+    private Collection $totaldatas;
+
+    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'birds')]
+    private Collection $users;
+
+    public function __construct()
+    {
+        $this->totaldatas = new ArrayCollection();
+        $this->users = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -92,4 +106,62 @@ class Birds
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Totaldata>
+     */
+    public function getTotaldatas(): Collection
+    {
+        return $this->totaldatas;
+    }
+
+    public function addTotaldata(Totaldata $totaldata): self
+    {
+        if (!$this->totaldatas->contains($totaldata)) {
+            $this->totaldatas->add($totaldata);
+            $totaldata->setBirds($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTotaldata(Totaldata $totaldata): self
+    {
+        if ($this->totaldatas->removeElement($totaldata)) {
+            // set the owning side to null (unless already changed)
+            if ($totaldata->getBirds() === $this) {
+                $totaldata->setBirds(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users->add($user);
+            $user->addBird($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->removeElement($user)) {
+            $user->removeBird($this);
+        }
+
+        return $this;
+    }
+    
 }

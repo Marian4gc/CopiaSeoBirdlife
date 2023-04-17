@@ -9,12 +9,7 @@ register:
     controller: App\Controller\RegisterController::register
     methods: ['POST']
 
-api_birds:
-    path: /api/birds
-    methods: [POST, GET]
-    controller: App\Controller\ApiController::postBirds
-
-app_post:
-    path: /api/post
-    methods: [POST, GET]
-    controller: App\Controller\PostController::likeBird
+user_list:
+    path: /user
+    controller: App\Controller\UserController::list
+    methods: ['GET', 'POST']

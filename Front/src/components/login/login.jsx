@@ -58,7 +58,7 @@ function Login() {
                     <div className='success d-flex container justify-content-center'>
                         <div className="d-flex flex-column align-items-center">
                             <h2>¡Has iniciado sesión!</h2>
-                            <a href='/Discovery' className='btn-login btnAzul'>Ve al inicio</a>
+                            <a href='/Discovery' className='btn-login btnAzul'>Comienza tu aventura</a>
                         </div>
                     </div>
 

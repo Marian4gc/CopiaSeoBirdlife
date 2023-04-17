@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\PlantRepository;
+use App\Repository\InsectRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: PlantRepository::class)]
-class Plant
+#[ORM\Entity(repositoryClass: InsectRepository::class)]
+class Insect
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -18,16 +18,16 @@ class Plant
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 500)]
     private ?string $description = null;
 
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
-    #[ORM\OneToMany(mappedBy: 'plant', targetEntity: Totaldata::class)]
+    #[ORM\OneToMany(mappedBy: 'insect', targetEntity: Totaldata::class)]
     private Collection $totaldatas;
 
-    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'plant')]
+    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'insect')]
     private Collection $users;
 
     public function __construct()
@@ -89,7 +89,7 @@ class Plant
     {
         if (!$this->totaldatas->contains($totaldata)) {
             $this->totaldatas->add($totaldata);
-            $totaldata->setPlant($this);
+            $totaldata->setInsect($this);
         }
 
         return $this;
@@ -99,8 +99,8 @@ class Plant
     {
         if ($this->totaldatas->removeElement($totaldata)) {
             // set the owning side to null (unless already changed)
-            if ($totaldata->getPlant() === $this) {
-                $totaldata->setPlant(null);
+            if ($totaldata->getInsect() === $this) {
+                $totaldata->setInsect(null);
             }
         }
 
@@ -119,7 +119,7 @@ class Plant
     {
         if (!$this->users->contains($user)) {
             $this->users->add($user);
-            $user->addPlant($this);
+            $user->addInsect($this);
         }
 
         return $this;
@@ -128,7 +128,7 @@ class Plant
     public function removeUser(User $user): self
     {
         if ($this->users->removeElement($user)) {
-            $user->removePlant($this);
+            $user->removeInsect($this);
         }
 
         return $this;
