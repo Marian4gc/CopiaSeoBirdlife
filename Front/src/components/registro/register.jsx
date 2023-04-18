@@ -66,6 +66,7 @@ function Register() {
                                     className='form-control'
                                     minLength={3}
                                 />
+
                                 <label htmlFor='password' className="form-label">Contraseña</label>
                                 <input
                                     type='password'
@@ -77,10 +78,10 @@ function Register() {
                                     minLength={6}
                                 />
                                 <div className='d-flex container justify-content-center'>
-                                    <button className='btnAzul'>Registrarse</button>
+                                    <button className='mt-3 btnAzul'>Registrarse</button>
                                 </div>
                             </form>
-                                <p className='text-center'>Si ya estás registrado pasa a:</p>
+                            <p className='text-center'>Si ya estás registrado pasa a:</p>
                             <div className='d-flex container justify-content-center'>
                                 <a href="/login" className='btnAzul'>Iniciar sesión</a>
                             </div>

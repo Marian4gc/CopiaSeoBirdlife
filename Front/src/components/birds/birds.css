@@ -48,7 +48,9 @@
 }
 
 .card-text {
-    font-size: 0.95rem
+    font-size: 0.75rem;
+    line-height: 20px;
+    margin-top: 7px;
 }
 
 .card-body h3 {
@@ -75,3 +77,15 @@
         max-width: 50%;
     }
 }
+.corazon{ margin: 7px 12px 0 12px;}
+.mini-player{ margin: 0 12px;}
+
+.heart-fill-red {
+    color: red;
+}
+
+.bi-eye-fill {
+    font-size: 2rem;
+    cursor: pointer;
+}
+.ojo{  margin: 7px 12px 0 12px;}
