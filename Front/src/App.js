@@ -6,6 +6,7 @@ import Birds from './components/birds/Birds'
 // import Plants from './components/plants/Plants';
 import Thanks from './components/thanks/Thanks';
 import AllBirds from './components/results/AllBirds';
+import Map from './components/map/Map';
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
     {
       path:"/Login",
       element:<><Login /> </>
+    },
+    {
+      path:"/Map",
+      element:<><Map /> </>
     },
     {
       path:"/Discovery",
