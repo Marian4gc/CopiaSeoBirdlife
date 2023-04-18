@@ -5,7 +5,7 @@ import axios from 'axios';
 import PetirojoIzquierda from '../images/petirojoIzq.png';
 import PetirojoDerecha from '../images/petirojoDcha.png';
 import Song from './Song';
-// import Eyes from "./eyes.jsx";
+
 
 
 
@@ -109,7 +109,7 @@ function Birds() {
                     <h1>Sigue la pista de las aves</h1>
                     <img src={PetirojoDerecha} id="gorrionDer" />
                 </div>
-                <h2 className="pb-2 border-bottom">Aves</h2>
+                <h2 className="pb-2 border-bottom mt-7">Aves</h2>
                 <div className="row">
                     {repo.map((int, index) => (
                         <div className="col-lg-6 mb-4">

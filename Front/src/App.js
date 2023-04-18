@@ -3,18 +3,19 @@ import Home from './components/Home/Home';
 import Login from './components/login/Login';
 import Register from './components/registro/register';
 import Birds from './components/birds/Birds'
-// import Plants from './components/plants/Plants';
+import Plants from './components/plants/Plants';
 import Thanks from './components/thanks/Thanks';
 import AllBirds from './components/results/AllBirds';
 import Map from './components/map/Map';
-import NavBar from './components/navBar/NavBar';
+
+import Start from './components/navBar/Start';
 
 
 function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<><Home />  </>
+      element:<> <Home />  </>
     },
     { 
       path:"/Register",
@@ -30,11 +31,15 @@ function App() {
     },
     {
       path:"/Discovery",
-      element:<><Birds />  </>
+      element:<> <Birds />  </>
+    },
+    {
+      path:"/plants",
+      element:<> <Plants />  </>
     },
     {
       path:"/Thanks",
-      element:<><NavBar /> <Thanks /></>
+      element:<><Start /> <Thanks /></>
     },
     {
       path:"/Results",
