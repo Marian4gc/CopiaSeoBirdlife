@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import icono from '../images/iconoUbicacion.svg';
 
 import Coordinates from './Coordinates';
-import Date from '../date/Date';
+import Date from '../date/TodayDate';
 
 class Map extends Component {
     componentDidMount() {

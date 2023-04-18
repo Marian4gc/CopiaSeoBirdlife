@@ -155,18 +155,18 @@ function Birds() {
                                                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                                                  </svg> */}
                                                 {likes[index] ? (
-                                                   
-                                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                                     width="30"
-                                                     height="30"
-                                                     fill="green"
-                                                     class="bi bi-eye-fill ojo"
-                                                     viewBox="0 0 16 16"
-                                                     onClick={() => handleLike(index)}>
-                                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
 
-                                                 </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="30"
+                                                        height="30"
+                                                        fill="green"
+                                                        class="bi bi-eye-fill ojo"
+                                                        viewBox="0 0 16 16"
+                                                        onClick={() => handleLike(index)}>
+                                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+
+                                                    </svg>
                                                 ) : (
                                                     <svg xmlns="http://www.w3.org/2000/svg"
                                                         width="30"
@@ -204,7 +204,7 @@ function Birds() {
                     role="button"
                     data-bs-toggle="button"
                     onClick={handleSendData}
-                >Envía tus datos</a>
+                >Envía tus descubrimientos</a>
             </div>
         </>
     );

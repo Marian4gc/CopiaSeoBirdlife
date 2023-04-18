@@ -7,6 +7,7 @@ import Birds from './components/birds/Birds'
 import Thanks from './components/thanks/Thanks';
 import AllBirds from './components/results/AllBirds';
 import Map from './components/map/Map';
+import NavBar from './components/navBar/NavBar';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
     },
     {
       path:"/Thanks",
-      element:<><Thanks /></>
+      element:<><NavBar /> <Thanks /></>
     },
     {
       path:"/Results",
