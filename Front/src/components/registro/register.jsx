@@ -45,50 +45,45 @@ function Register() {
                 {success ? (
                     <div className='success d-flex container justify-content-center mt-7'>
                         <div className="d-flex flex-column align-items-center">
-                        <h2>¡Registro completado!</h2>
-                        <a href='/login' className='btn-login btnAzul'>Ve al inicio de sesión</a>
+                            <h2>¡Registro completado!</h2>
+                            <a href='/login' className='mt-5 btn-login btnAzul'>Ve al inicio de sesión</a>
                         </div>
                     </div>
                 ) : (
-                    <div id='secRegister'  >
+                    <div id='secRegister' className='d-flex container justify-content-center mt-7' >
                         <h1>Registro de usuario</h1>
                         <div className='box-registration'>
                             <form onSubmit={handleSubmit}>
-                                <div className="mb-3">
-                                    <label htmlFor='username' className="form-label">Usuario</label>
-                                    <input
-                                        type='text'
-                                        id='username'
-                                        autoComplete='off'
-                                        onChange={(e) => setUsername(e.target.value)}
-                                        value={username}
-                                        required
-                                        className='form-control'
-                                        minLength={6}
-                                    />
+
+                                <label htmlFor='username' className="form-label">Usuario</label>
+                                <input
+                                    type='text'
+                                    id='username'
+                                    autoComplete='off'
+                                    onChange={(e) => setUsername(e.target.value)}
+                                    value={username}
+                                    required
+                                    className='form-control'
+                                    minLength={3}
+                                />
+                                <label htmlFor='password' className="form-label">Contraseña</label>
+                                <input
+                                    type='password'
+                                    id='password'
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    value={password}
+                                    required
+                                    className='form-control'
+                                    minLength={6}
+                                />
+                                <div className='d-flex container justify-content-center'>
+                                    <button className='btnAzul'>Registrarse</button>
                                 </div>
-                                <div className="mb-3">
-
-                                    <label htmlFor='password' className="form-label">Contraseña</label>
-                                    <input
-                                        type='password'
-                                        id='password'
-                                        onChange={(e) => setPassword(e.target.value)}
-                                        value={password}
-                                        required
-                                        className='form-control'
-                                        minLength={6}
-                                    />
-                                </div>
-                                <span>Protección de datos personales
-                                    Utilizaremos sus datos para informar y gestionar la inscripción como socio, enviar comunicaciones comerciales y realizar análisis estadísticos. Para más información sobre el tratamiento y sus derechos, consulte la política de privacidad.</span>
-                                {/* <Checkbox /> */}
-                                <button className='btnAzul'>Registrarse</button>
-
-
                             </form>
-
-                            <a href="/login" className='btnAzul'>Iniciar sesión</a>
+                                <p className='text-center'>Si ya estás registrado pasa a:</p>
+                            <div className='d-flex container justify-content-center'>
+                                <a href="/login" className='btnAzul'>Iniciar sesión</a>
+                            </div>
                         </div>
                     </div>
                 )}

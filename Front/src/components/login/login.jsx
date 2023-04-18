@@ -57,13 +57,13 @@ function Login() {
                 {success ? (
                     <div className='success d-flex container justify-content-center mt-7'>
                         <div className="d-flex flex-column align-items-center">
-                            <h2>¡Bienvenid@, {username}!</h2>
-                            <a href='/Discovery' className='btn-login btnAzul'>Comienza tu aventura</a>
+                            <h1>¡Bienvenid@, {username}!</h1>
+                            <a href='/Discovery' className='mt-5 btn-login btnAzul'>Comienza tu aventura</a>
                         </div>
                     </div>
 
                 ) : (
-                    <div id='secLogin' className='d-flex container justify-content-center'>
+                    <div id='secLogin' className='d-flex container justify-content-center mt-5'>
                         <h1>Login</h1>
                         <div className='box-fichaje'>
                             <form onSubmit={handleSubmit}>
@@ -88,7 +88,7 @@ function Login() {
                                     className='form-control'
                                 />
                                 <div className='d-flex container justify-content-center'>
-                                    <button className='btnAzul'>Entrar</button>
+                                    <button className='mt-5 btnAzul'>Entrar</button>
                                 </div>
                             </form>
 

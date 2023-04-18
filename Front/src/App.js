@@ -5,12 +5,14 @@ import Register from './components/registro/register';
 import Birds from './components/birds/Birds'
 // import Plants from './components/plants/Plants';
 import Thanks from './components/thanks/Thanks';
+import AllBirds from './components/results/AllBirds';
+
 
 function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<><Home /> </>
+      element:<><Home />  </>
     },
     { 
       path:"/Register",
@@ -27,6 +29,10 @@ function App() {
     {
       path:"/Thanks",
       element:<><Thanks /></>
+    },
+    {
+      path:"/Results",
+      element:<><AllBirds /></>
     },
     
 

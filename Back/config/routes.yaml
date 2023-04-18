@@ -20,6 +20,6 @@ app_post:
     controller: App\Controller\PostController::likeBird
 
 app_allbird:
-    path: /api/allbirds
+    path: /totaldata/allbirds
     methods: [POST, GET]
-    controller: App\Controller\PostController::AllBird
+    controller: App\Controller\TotaldataController::AllBird
