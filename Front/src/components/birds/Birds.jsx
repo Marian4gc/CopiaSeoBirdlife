@@ -137,23 +137,6 @@ function Birds() {
                                                 {int.description}
                                             </p>
                                             <div className="d-grid gap-2 d-md-flex justify-content-md-end mb-4 mb-lg-3">
-                                                {/* <svg xmlns="http://www.w3.org/2000/svg"
-                                                    width="30"
-                                                    height="30"
-                                                    fill={likes[index] ? "red" : "grey"}
-                                                    className="bi bi-suit-heart-fill corazon"
-                                                    viewBox="0 0 16 16"
-                                                    onClick={() => handleLike(index)}>
-                                                    <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-                                                </svg> */}
-                                                {/* <svg xmlns="http://www.w3.org/2000/svg"
-                                                 width="30" 
-                                                 height="30" fill={likes[index] ? "green" : "grey"}
-                                                 class="bi bi-eye-fill ojo" viewBox="0 0 16 16"
-                                                 onClick={() => handleLike(index)}>
-                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                                                 </svg> */}
                                                 {likes[index] ? (
 
                                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -178,11 +161,7 @@ function Birds() {
                                                         <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z" />
                                                         <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z" />
                                                     </svg>
-
                                                 )}
-
-
-
                                                 <Song song={int.song} />
                                                 <button
                                                     type="button"
@@ -199,12 +178,12 @@ function Birds() {
                         </div>
                     ))}
                 </div>
-                <a href={"#"}
+                <a href={"#plant"}
                     className="btn btn-primary"
                     role="button"
                     data-bs-toggle="button"
                     onClick={handleSendData}
-                >Envía tus descubrimientos</a>
+                >Busca las plantas</a>
             </div>
         </>
     );

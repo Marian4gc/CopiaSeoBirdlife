@@ -9,6 +9,7 @@ import AllBirds from './components/results/AllBirds';
 import Map from './components/map/Map';
 
 import Start from './components/navBar/Start';
+import Insects from './components/insects/Insects';
 
 
 function App() {
@@ -31,12 +32,16 @@ function App() {
     },
     {
       path:"/Discovery",
-      element:<> <Birds />  </>
+      element:<> <Birds /> <Plants /> <Insects />  </>
     },
-    {
-      path:"/plants",
-      element:<> <Plants />  </>
-    },
+    // {
+    //   path:"/plants",
+    //   element:<>   </>
+    // },
+    // {
+    //   path:"/insect",
+    //   element:<>   </>
+    // },
     {
       path:"/Thanks",
       element:<><Start /> <Thanks /></>

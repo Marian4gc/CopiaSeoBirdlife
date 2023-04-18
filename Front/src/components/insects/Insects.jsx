@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
-import plant from '../images/plant.svg';
+import butterfly from '../images/butterfly.svg';
 import '../birds/birds.css'
 
-function Plants() {
+function Insects() {
 
-    const [plants, setRepo] = useState([]);
+    const [repo, setRepo] = useState([]);
 
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/plant/list')
+        fetch('http://127.0.0.1:8000/insect/list')
             .then(response => response.json())
-            .then(plants => setRepo(plants))
+            .then(repo => setRepo(repo))
             .catch(error => console.error(error));
     }, []);
 
-    const [likes, setLikes] = useState(new Array(plants.length).fill(false));
+    const [likes, setLikes] = useState(new Array(repo.length).fill(false));
 
 
     const handleLike = (index) => {
@@ -28,8 +28,8 @@ function Plants() {
     };
 
         // función para enviar datos
-        function sendData(selectedPlantsData) {
-            axios.post('http://127.0.0.1:8000/totaldata/plant', selectedPlantsData, {
+        function sendData(selectedInsectData) {
+            axios.post('http://127.0.0.1:8000/totaldata/insect', selectedInsectData, {
                 headers: {
                     "Content-Type": "application/json",
                 }
@@ -45,17 +45,17 @@ function Plants() {
     
         // función para manejar el envío de datos
         const handleSendData = () => {
-            const selectedPlants = plants.filter((int, index) => likes[index]);
-            if (selectedPlants.length === 0) {
-                console.log("No hay plantas seleccionadas");
+            const selectedInsect = repo.filter((int, index) => likes[index]);
+            if (selectedInsect.length === 0) {
+                console.log("No hay insectos seleccionados");
                 return;
             }
-            const selectedPlantsData = selectedPlants.map((plant) => ({
-                name: plant.name,
+            const selectedInsectData = selectedInsect.map((insect) => ({
+                name: insect.name,
             }));
     
-            console.log("Selected plants data:", selectedPlantsData);
-            const jsonData = JSON.stringify({ plants: selectedPlantsData });
+            console.log("Selected insect data:", selectedInsectData);
+            const jsonData = JSON.stringify({ insects: selectedInsectData });
             // console.log("JSON.stringify(selectedBirdsData):", jsonData);
     
             sendData(jsonData);
@@ -66,13 +66,13 @@ return (
     <>
     <div className="container px-4 py-5" id="hanging-icons">
     <div className="d-flex justify-content-around encabezadoGeneral">
-                    <img src={plant} id="plant" />
-                    <h1>Sigue la pista de las plantas</h1>
-                    <img src={plant} id="plant" />
+                    <img src={butterfly} id="butterfly" />
+                    <h1>Sigue la pista de los insectos</h1>
+                    <img src={butterfly} id="butterfly" />
                 </div>
-        <h2 className="pb-2 border-bottom mt-7">Plantas</h2>
+        <h2 className="pb-2 border-bottom mt-7">Insectos</h2>
         <div className="row">
-            {plants.map((int, index) => (
+            {repo.map((int, index) => (
                 <div className="col-lg-6 mb-4">
                     <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg cosa">
                         <div className="row no-gutters" key={int.id}>
@@ -122,7 +122,9 @@ return (
                                                         <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z" />
                                                         <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z" />
                                                     </svg>
+
                                                 )}
+
                                     </div>
                                 </div>
                             </div>
@@ -131,15 +133,15 @@ return (
                 </div>
             ))}
         </div>
-        <a href={"#butterfly"}
+        <a href={"#"}
             className="btn btn-primary"
             role="button"
             data-bs-toggle="button"
             onClick={handleSendData}
-        >Busca los insectos</a>
+        >Envía tus descubrimientos</a>
     </div>
 </>
 );
 }
 
-export default Plants
+export default Insects
