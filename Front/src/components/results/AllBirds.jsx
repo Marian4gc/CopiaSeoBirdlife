@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ReactTable } from 'react-table';
-
+import Table from 'react-bootstrap/Table'
 
 function AllBirds() {
 
@@ -12,26 +11,29 @@ function AllBirds() {
             .then(data => setData(data));
     }, []);
 
-    const columns = [
-        {
-            Header: 'ID',
-            accessor: 'id'
-        },
-        {
-            Header: 'Name',
-            accessor: 'name'
-        },
-        {
-            Header: 'User',
-            accessor: 'user'
-        }
-    ];
+    const filteredData = data.filter(item => {
+        return item.name !== "" && item.user !== "";
+    });
 
     return (
-        <ReactTable
-            data={data}
-            columns={columns}
-        />
+        <Table striped bordered hover>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                {filteredData.map((item, index) => (
+                    <tr key={index}>
+                        <td>{item.id}</td>
+                        <td>{item.name}</td>
+                        <td>{item.user}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </Table>
     );
 }
 

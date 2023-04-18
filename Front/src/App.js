@@ -5,11 +5,13 @@ import Register from './components/registro/register';
 import Birds from './components/birds/Birds'
 import Plants from './components/plants/Plants';
 import Thanks from './components/thanks/Thanks';
-import AllBirds from './components/results/AllBirds';
+
 import Map from './components/map/Map';
 
 import Start from './components/navBar/Start';
 import Insects from './components/insects/Insects';
+
+import AllBirds from './components/results/AllBirds';
 
 
 function App() {
