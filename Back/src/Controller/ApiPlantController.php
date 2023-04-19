@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 #[Route('/plant')]
-class PlantController extends AbstractController
+class ApiPlantController extends AbstractController
 {
     #[Route('/list', name: 'app_apiplant_index', methods: ['GET'])]
     public function index(PlantRepository $plantRepository): Response
