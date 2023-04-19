@@ -27,24 +27,34 @@ function AllBirds() {
         "Tortola europea": "Tortola europea",
         "Vencejo común": "Vencejo común",
     };
-
+    
     const plantas = {
-        "almendro": "Almendro",
+        "Almendro": "Almendro",
         "Amapola": "Amapola",
         "Castaño": "Castaño",
         "Jara Pringosa": "Jara Pringosa",
         "Plátano de paseo": "Plátano de paseo",
         // Agrega más plantas aquí
     };
-
+    
     const insectos = {
-        "abeja": "Abeja",
+        "Abeja": "Abeja",
         "Chupaleche": "Chupaleche",
         // Agrega más insectos aquí
     };
 
-    const filteredData = data.filter(item => {
-        return item.name !== "";
+    const avesArr = [];
+    const plantasArr = [];
+    const insectosArr = [];
+
+    data.forEach(item => {
+        if (aves[item.name]) {
+            avesArr.push(item);
+        } else if (plantas[item.name]) {
+            plantasArr.push(item);
+        } else if (insectos[item.name]) {
+            insectosArr.push(item);
+        }
     });
 
     return (
@@ -57,19 +67,27 @@ function AllBirds() {
                 </tr>
             </thead>
             <tbody>
-                {filteredData.map((item, index) => {
-                    let ave = aves[item.name] || "-";
-                    let planta = plantas[item.name] || "-";
-                    let insecto = insectos[item.name] || "-";
-                    return (
-                        <tr key={index}>
-                            <td>{item.name}</td>
-                            <td>{ave !== "" ? ave : "-"}</td>
-                            <td>{planta !== "" ? planta : "-"}</td>
-                            <td>{insecto !== "" ? insecto : "-"}</td>
-                        </tr>
-                    );
-                })}
+                {Object.values(avesArr).map((item, index) => (
+                    <tr key={index}>
+                        <td>{item.name}</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                ))}
+                {Object.values(plantasArr).map((item, index) => (
+                    <tr key={index}>
+                        <td>-</td>
+                        <td>{item.name}</td>
+                        <td>-</td>
+                    </tr>
+                ))}
+                {Object.values(insectosArr).map((item, index) => (
+                    <tr key={index}>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>{item.name}</td>
+                    </tr>
+                ))}
             </tbody>
         </Table>
     );

@@ -55,7 +55,6 @@ class TotaldataController extends AbstractController
             $post[] = [
                 // 'id' => $r->getId(),
                 'name' => $r->getName(),
-                'user' => $r->getUser()
             ];
         }
 
@@ -148,7 +147,6 @@ class TotaldataController extends AbstractController
         $post[] = [
             'id' => $r->getId(),
             'name' => $r->getName(),
-            'user' => $r->getUser()
         ];
     }
     return $this->json($post, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
