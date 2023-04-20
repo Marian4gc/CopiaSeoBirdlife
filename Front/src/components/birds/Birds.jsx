@@ -33,14 +33,6 @@ function Birds() {
         });
     };
 
-    const storedToken = localStorage.getItem("loggedAppUser");
-    const parsedToken = JSON.parse(storedToken);
-    const accessToken = parsedToken.accessToken;
-    const token = accessToken.token;
-
-    console.log(token)
-
-    try {
 
         useEffect(() => {
 
@@ -59,11 +51,7 @@ function Birds() {
                     }, []);
             }
         })
-    } catch {
 
-        console.log('Algo salio mal...')
-
-    }
 
 
     // función para enviar datos
