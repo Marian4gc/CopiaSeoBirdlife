@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import butterfly from '../images/butterfly.svg';
 
-function AllBirds() {
+function AllData() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -108,4 +108,4 @@ function AllBirds() {
     );
 }
 
-export default AllBirds;
+export default AllData;

@@ -23,6 +23,7 @@ class CoordenadasController extends AbstractController
     if (!isset($data) || !is_array($data) || count($data) === 0) {
         return $this->json(['error' => 'Datos inválidos'], $status = 400, $headers = ['Access-Control-Allow-Origin'=>'*']);
     }
+    
 
         $coordenada = new Coordenadas();
 
@@ -33,8 +34,6 @@ class CoordenadasController extends AbstractController
         $latitud = $data['latitud'];
         $longitud = $data['longitud'];
 
-        $coordenada->setLatitud('');
-        $coordenada->setLongitud('');
 
         // Guardar la instancia de Coordenadas en la base de datos
 
@@ -46,12 +45,27 @@ class CoordenadasController extends AbstractController
         return $this->json($coordenada, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
 }
 
-#[Route('/all', name: 'app_coordenadas_all', methods: ['GET'])]
+#[Route('/all', name: 'app_coordenadas_all', methods: ['GET', 'POST'])]
 public function getAllCoordenadas(CoordenadasRepository $coordenadasRepository): Response
 {
     $coordenadas = $coordenadasRepository->findAll();
 
-    return $this->json($coordenadas, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
+    if (empty($coordenadas)) {
+        return $this->json(['error' => 'No se encontraron coordenadas'], $status = 404, $headers = ['Access-Control-Allow-Origin'=>'*']);
+    }
+
+    $coordenadasArray = [];
+
+    foreach($coordenadas as $coordenada) {
+        $coordenadaData = [
+            'latitud' => $coordenada->getLatitud(),
+            'longitud' => $coordenada->getLongitud()
+        ];
+
+        array_push($coordenadasArray, $coordenadaData);
+    }
+
+    return $this->json($coordenadasArray, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
 }
 }
 

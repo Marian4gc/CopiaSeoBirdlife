@@ -13,11 +13,11 @@ class Coordenadas
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $longitud = null;
+    #[ORM\Column(type: 'decimal', precision: 10, scale: 7)]
+    private ?float $longitud = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $latitud = null;
+    #[ORM\Column(type: 'decimal', precision: 10, scale: 7)]
+    private ?float $latitud = null;
 
     public function getId(): ?int
     {

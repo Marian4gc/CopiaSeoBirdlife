@@ -11,7 +11,7 @@ import Map from './components/map/Map';
 import Start from './components/navBar/Start';
 import Insects from './components/insects/Insects';
 
-import AllBirds from './components/results/AllBirds';
+import AllData from './components/results/AllData';
 
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
     },
     {
       path:"/Results",
-      element:<><AllBirds /></>
+      element:<><AllData /></>
     },
     
 

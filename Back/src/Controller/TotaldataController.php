@@ -53,7 +53,6 @@ class TotaldataController extends AbstractController
         $result = $totaldataRepository->findAll();
         foreach ($result as $r) {
             $post[] = [
-                // 'id' => $r->getId(),
                 'name' => $r->getName(),
             ];
         }
