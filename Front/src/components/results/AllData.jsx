@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
-import butterfly from '../images/butterfly.svg';
+import search from '../images/search.svg';
 
 function AllData() {
     const [data, setData] = useState([]);
@@ -67,9 +67,9 @@ function AllData() {
     return (
         <div className="container">
             <div className="d-flex justify-content-around encabezadoGeneral">
-                <img src={butterfly} id="butterfly" />
+                <img src={search} id="butterfly" />
                 <h1>Avistamientos totales</h1>
-                <img src={butterfly} id="butterfly" />
+                <img src={search} id="search" />
             </div>
             <div className="row">
                 <div className="col-md-4">

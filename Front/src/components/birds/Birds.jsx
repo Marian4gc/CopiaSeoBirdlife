@@ -34,40 +34,20 @@ function Birds() {
     };
 
 
-        useEffect(() => {
-
-            const axiosRequest = async () => {
-
-                await axios.get('http://127.0.0.1:8000/totaldata/list', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    }
-                })
-                    .then((response) => {
-                        console.log(response.data);
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    }, []);
-            }
-        })
-
-
-
-    // función para enviar datos
-    function sendData(selectedBirdsData, username) {
-        axios.post('http://127.0.0.1:8000/totaldata/list', selectedBirdsData, username, {
-            headers: {
-                "Content-Type": "application/json",
-            }
-        })
-            .then((response) => {
-                console.log(response.data);
+    function sendData(selectedBirdsData) {
+        axios.post('http://127.0.0.1:8000/totaldata/list', selectedBirdsData, {
+                headers: {
+                    "Content-Type": "application/json",
+                }
             })
-            .catch((error) => {
-                console.error(error);
-            }, []);
+        .then((response) => {
+            console.log(response.data);
+        })
+        .catch((error) => {
+            console.error(error);
+        },[]);
     }
+
 
 
     // función para manejar el envío de datos
@@ -81,8 +61,8 @@ function Birds() {
             name: bird.name,
         }));
 
-        console.log("Selected birds data:", selectedBirdsData, parsedToken.username);
-        const jsonData = JSON.stringify({ birds: selectedBirdsData, user: parsedToken.username });
+        console.log("Selected birds data:", selectedBirdsData);
+        const jsonData = JSON.stringify({ birds: selectedBirdsData});
         // console.log("JSON.stringify(selectedBirdsData):", jsonData);
 
         sendData(jsonData);
