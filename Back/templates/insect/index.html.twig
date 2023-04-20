@@ -3,9 +3,11 @@
 {% block title %}Insect index{% endblock %}
 
 {% block body %}
+<div class="title-image-container2">
+    <img src="{{ asset('images/mariposa.png') }}" alt="Birds Image">
     <h1>Insect index</h1>
-
-    <table class="table">
+</div>
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>Id</th>
@@ -23,8 +25,8 @@
                 <td>{{ insect.description }}</td>
                 <td>{{ insect.image }}</td>
                 <td>
-                    <a href="{{ path('app_insect_show', {'id': insect.id}) }}">show</a>
-                    <a href="{{ path('app_insect_edit', {'id': insect.id}) }}">edit</a>
+                    <a class="btn btn-warning" href="{{ path('app_insect_show', {'id': insect.id}) }}">show</a>
+                    <a class="btn btn-success1" href="{{ path('app_insect_edit', {'id': insect.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +37,8 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_insect_new') }}">Create new</a>
+   
+     <a class="btn btn-success" href="{{ path('app_insect_new') }}">Create new</a>
+     <a class= "btn btn-success" href="{{ path('app_birds_index') }}">Volver a birds</a>
+     <a class= "btn btn-success" href="{{ path('app_plant_index') }}">Ir a plants</a>
 {% endblock %}
