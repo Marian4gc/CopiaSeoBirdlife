@@ -78,7 +78,7 @@ function Login() {
                             <h1>¡Bienvenid@, {username}!</h1>
                             <a href='/Map' className='mt-5 btn-login btnAzul'>Comienza tu aventura</a>
 
-                            <a href='/userlist' className='mt-5 btn-login btnAzul'>Hola admin</a>
+                            <a href='/userlist' className='greenbtn mt-3'>¡Hola admin!</a>
                         </div>
                     </div>
 
