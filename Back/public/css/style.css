@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+@media (min-width: 400px) {
+
+  * {
+    font-family: 'Chewy';
+  }
+
+  body {
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center !important;
+    margin-right: 150px;
+  }
+
+  .btn-warning {
+    margin: 8px !important;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .btn-success1 {
+    margin: 9px !important;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+    background-color: greenyellow;
+    width: 60px;
+  }
+
+  .btn-success {
+    background-color: greenyellow !important;
+    color: black;
+  }
+
+  img,
+  svg {
+    vertical-align: middle;
+    height: 10px;
+    width: 4%;
+    text-align: center;
+    margin-left: 10%;
+  }
+
+  .title-image-container1 {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title-image-container1 img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .title-image-container2 {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title-image-container2 img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .title-image-container3 {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title-image-container3 img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .back {
+    border: 2px solid #4CAF50;
+    text-decoration: none;
+    color: black;
+  }
+
+  button,input,optgroup,select,textarea {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  * {
+    font-family: 'Chewy';
+  }
+
+  body {
+    margin: 20px;
+    background-color: #ffffff !important;
+  }
+
+  h1 {
+    text-align: center !important;
+  }
+
+  img,
+  svg {
+    vertical-align: middle;
+    width: 7%;
+    text-align: center;
+    margin-left: 30%;
+  }
+
+  .title-image-container {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .title-image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .btn-warning {
+    margin: 20px !important;
+  }
+
+  .btn-success {
+    margin: 20px !important;
+  }
+
+  button,input,optgroup,select,textarea {
+    margin: 5px;
+  }
+}
