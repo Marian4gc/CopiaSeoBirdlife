@@ -17,31 +17,31 @@ function Coordinates() {
     //enviar datos
     const enviarCoordenadas = () => {
         const mapa = {
-          latitud: posicion[0],
-          longitud: posicion[1]
+            latitud: posicion[0],
+            longitud: posicion[1]
         };
-    
+
         console.log(mapa);
-      
+
         axios.post('http://localhost:8000/coordenadas/', mapa, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
-        .then(response => {
-          console.log(response.data);
-        })
-        .catch(error => {
-          console.error(error);
-        }, []);
-      }
-    
+            .then(response => {
+                console.log(response);
+            })
+            .catch(error => {
+                console.error(error);
+            }, []);
+    }
+
 
     return (
         <div className="mapa">
             <div className="d-flex justify-content-around encabezadoGeneral">
                 <img src={location} id="location" />
-                    <h1>Mi ubicación actual</h1>
+                <h1>Mi ubicación actual</h1>
                 <img src={location} id="location" />
             </div>
             <div className="d-flex flex-column align-items-center mt-3">

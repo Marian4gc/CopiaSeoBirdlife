@@ -30,6 +30,12 @@ class CoordenadasController extends AbstractController
         $coordenada->setLatitud($data['latitud']);
         $coordenada->setLongitud($data['longitud']);
 
+        $latitud = $data['latitud'];
+        $longitud = $data['longitud'];
+
+        $coordenada->setLatitud('');
+        $coordenada->setLongitud('');
+
         // Guardar la instancia de Coordenadas en la base de datos
 
         $entityManager->persist($coordenada);
