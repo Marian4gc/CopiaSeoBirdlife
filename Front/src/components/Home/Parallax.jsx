@@ -6,6 +6,7 @@ import CiudadBosque from '../images/CiudadBosque.png'
 import GolondrinaDerecha from '../images/golondrinaDerecha.png'
 import GolondrinaIzquierda from '../images/golondrinaIzquierda.png'
 import "./Home.css"
+import Start from "../navBar/Start";
 
 function Parallax() {
 
@@ -37,6 +38,9 @@ function Parallax() {
 
   return (
     <div>
+      <nav>
+        <Start />
+      </nav>
       <section>
         <div id="text">
           <img src={Logo} id="logo" />

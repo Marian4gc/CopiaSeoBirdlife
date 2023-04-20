@@ -37,17 +37,13 @@ function App() {
       path:"/Discovery",
       element:<> <Birds /> <Plants /> <Insects />  </>
     },
-    {
-      path:"/plants",
-      element:<><Birds />   </>
-    },
     // {
     //   path:"/insect",
     //   element:<>   </>
     // },
     {
       path:"/Thanks",
-      element:<><Start /> <Thanks /></>
+      element:<> <Thanks /></>
     },
     {
       path:"/Results",
