@@ -3,7 +3,10 @@
 {% block title %}Birds index{% endblock %}
 
 {% block body %}
-    <h1>Birds index</h1>
+     <div class="title-image-container1">
+        <img src="{{ asset('images/petirojoIzq.png') }}" alt="Birds Image">
+        <h1>Indice de Aves/h1>
+    </div>
 
     <table class="table table-striped">
         <thead>
@@ -27,17 +30,19 @@
                 <td>{{ bird.link }}</td>
                 <td>{{ bird.song }}</td>
                 <td>
-                    <a type="button" class="btn btn-warning" href="{{ path('app_birds_show', {'id': bird.id}) }}">show</a>
-                    <a href="{{ path('app_birds_edit', {'id': bird.id}) }}">edit</a>
+                    <a type="button" class="btn btn-warning" href="{{ path('app_birds_show', {'id': bird.id}) }}">Ver</a>
+                    <a  class="btn btn-success1" href="{{ path('app_birds_edit', {'id': bird.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="7">no records found</td>
+                <td colspan="7">No records found</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_birds_new') }}">Create new</a>
+    <a class= "btn btn-success" href="{{ path('app_birds_new') }}">Crear nuevo</a>
+    <a class= "btn btn-success" href="{{ path('app_insect_index') }}">Ir a insectos</a>
+    <a class= "btn btn-success" href="{{ path('app_plant_index') }}">Ir a plantas</a>
 {% endblock %}
