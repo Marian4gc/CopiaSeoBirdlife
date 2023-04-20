@@ -22,12 +22,6 @@ function AllData() {
             });
     }, []);
 
-    // useEffect(() => {
-    //     fetch('http://127.0.0.1:8000/totaldata/allbirds')
-    //         .then((response) => response.json())
-    //         .then((data) => setData(data));
-    // }, []);
-
     const aves = {
         'Abejaruco europeo': 'Abejaruco europeo',
         'Abubilla común': 'Abubilla común',
@@ -51,13 +45,13 @@ function AllData() {
         Castaño: 'Castaño',
         'Jara Pringosa': 'Jara Pringosa',
         'Plátano de paseo': 'Plátano de paseo',
-        // Agrega más plantas aquí
+
     };
 
     const insectos = {
         Abeja: 'Abeja',
         Chupaleche: 'Chupaleche',
-        // Agrega más insectos aquí
+
     };
 
     const avesArr = data.filter((item) => aves[item.name]);
@@ -71,7 +65,11 @@ function AllData() {
                 <h1>Avistamientos totales</h1>
                 <img src={search} id="search" />
             </div>
-            <div className="row">
+            <div className= "d-flex justify-content-center gap-3 mt-7">
+            <a type="button" class="btn btn-warning" href="/">Volver a inicio <i class="bi bi-arrow-left"></i></a>
+            <a type="button" class="btn btn-warning" href="http://127.0.0.1:8000/birds/">Ir tablas a back </a>
+            </div>
+            <div className="row mt-7">
                 <div className="col-md-4">
                     <Table striped bordered hover>
                         <thead>
