@@ -3,11 +3,13 @@
 {% block title %}Edit Coordenadas{% endblock %}
 
 {% block body %}
+<div class="title-image-container1">
     <h1>Edit Coordenadas</h1>
+</div>
 
     {{ include('coordenadas/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_coordenadas_index') }}">back to list</a>
+    <a class="btn btn-info"  href="{{ path('app_coordenadas_index') }}">back to list</a>
 
     {{ include('coordenadas/_delete_form.html.twig') }}
 {% endblock %}
