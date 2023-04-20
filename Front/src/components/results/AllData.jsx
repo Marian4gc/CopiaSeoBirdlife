@@ -14,7 +14,8 @@ function AllData() {
             .then(([response1, response2]) => Promise.all([response1.json(), response2.json()]))
             .then(([data, data2]) => {
                 setData(data);
-                setData2(data2);
+                const filteredData2 = data2.filter(coordenadas => coordenadas.latitud !== 0 && coordenadas.longitud !== 0);
+                setData2(filteredData2);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
@@ -75,7 +76,7 @@ function AllData() {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>Aves</th>
+                                <th style={{backgroundColor: 'lightblue'}}>Aves</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -91,7 +92,7 @@ function AllData() {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>Plantas</th>
+                                <th style={{backgroundColor: 'lightblue'}}>Plantas</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -107,7 +108,7 @@ function AllData() {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>Insectos</th>
+                                <th style={{backgroundColor: 'lightblue'}}>Insectos</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -123,13 +124,13 @@ function AllData() {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th>Coodenadas</th>
+                                <th style={{backgroundColor: 'lightblue'}}>Coodenadas</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {Object.values(insectosArr).map((item, index) => (
+                            {data2.map((item, index) => (
                                 <tr key={index}>
-                                    <td>{item.name}</td>
+                                    <td>{item.latitud}, {item.longitud}</td>
                                 </tr>
                             ))}
                         </tbody>
