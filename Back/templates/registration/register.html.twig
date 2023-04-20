@@ -3,7 +3,9 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
+ <div class="title-image-container3">
     <h1>Register</h1>
+
 
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.username) }}
@@ -13,5 +15,6 @@
         {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn btn-succes1">Register</button>
+         </div>
     {{ form_end(registrationForm) }}
 {% endblock %}
