@@ -27,78 +27,78 @@ function Insects() {
         });
     };
 
-        // función para enviar datos
-        function sendData(selectedInsectData) {
-            axios.post('http://127.0.0.1:8000/totaldata/insect', selectedInsectData, {
-                headers: {
-                    "Content-Type": "application/json",
-                }
-            })
-                .then((response) => {
-                    console.log(response.data);
-                })
-                .catch((error) => {
-                    console.error(error);
-                }, []);
-        }
-    
-    
-        // función para manejar el envío de datos
-        const handleSendData = () => {
-            const selectedInsect = repo.filter((int, index) => likes[index]);
-            if (selectedInsect.length === 0) {
-                console.log("No hay insectos seleccionados");
-                return;
+    // función para enviar datos
+    function sendData(selectedInsectData) {
+        axios.post('http://127.0.0.1:8000/totaldata/insect', selectedInsectData, {
+            headers: {
+                "Content-Type": "application/json",
             }
-            const selectedInsectData = selectedInsect.map((insect) => ({
-                name: insect.name,
-            }));
-    
-            console.log("Selected insect data:", selectedInsectData);
-            const jsonData = JSON.stringify({ insects: selectedInsectData });
-            // console.log("JSON.stringify(selectedBirdsData):", jsonData);
-    
-            sendData(jsonData);
-        };
-    
+        })
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            }, []);
+    }
 
-return (
-    <>
-    <div className="container px-4 py-5" id="hanging-icons">
-    <div className="d-flex justify-content-around encabezadoGeneral">
+
+    // función para manejar el envío de datos
+    const handleSendData = () => {
+        const selectedInsect = repo.filter((int, index) => likes[index]);
+        if (selectedInsect.length === 0) {
+            console.log("No hay insectos seleccionados");
+            return;
+        }
+        const selectedInsectData = selectedInsect.map((insect) => ({
+            name: insect.name,
+        }));
+
+        console.log("Selected insect data:", selectedInsectData);
+        const jsonData = JSON.stringify({ insects: selectedInsectData });
+        // console.log("JSON.stringify(selectedBirdsData):", jsonData);
+
+        sendData(jsonData);
+    };
+
+
+    return (
+        <>
+            <div className="container px-4 py-5" id="hanging-icons">
+                <div className="d-flex justify-content-around encabezadoGeneral">
                     <img src={butterfly} id="butterfly" />
                     <h1>Sigue la pista de los insectos</h1>
                     <img src={butterfly} id="butterfly" />
                 </div>
-        <h2 className="pb-2 border-bottom mt-7">Insectos</h2>
-        <div className="row">
-            {repo.map((int, index) => (
-                <div className="col-lg-6 mb-4">
-                    <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg cosa">
-                        <div className="row no-gutters" key={int.id}>
-                            <div className="col-md-4 col-12" style={{ textAlign: "center" }}>
-                                <img
-                                    src={int.image}
-                                    className="bi mt-2 mb-2 w-100 card-img"
-                                    style={{
-                                        maxWidth: "300px",
-                                        height: "auto",
-                                        marginLeft: "10px",
-                                    }}
-                                    alt={int.name}
-                                />
-                
-                            </div>
-                            <div className="col-md-8">
-                                <div className="card-body">
-                                    <h5 className="card-title">
-                                        {int.name}
-                                    </h5>
-                                    <p className="card-text">
-                                        {int.description}
-                                    </p>
-                                    <div className="d-grid gap-2 d-md-flex justify-content-md-end mb-4 mb-lg-3">
-                                        {likes[index] ? (
+                <h2 className="pb-2 border-bottom mt-7">Insectos</h2>
+                <div className="row">
+                    {repo.map((int, index) => (
+                        <div className="col-lg-6 mb-4">
+                            <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg cosa">
+                                <div className="row no-gutters" key={int.id}>
+                                    <div className="col-md-4 col-12" style={{ textAlign: "center" }}>
+                                        <img
+                                            src={int.image}
+                                            className="bi mt-2 mb-2 w-100 card-img"
+                                            style={{
+                                                maxWidth: "300px",
+                                                height: "auto",
+                                                marginLeft: "10px",
+                                            }}
+                                            alt={int.name}
+                                        />
+
+                                    </div>
+                                    <div className="col-md-8">
+                                        <div className="card-body">
+                                            <h5 className="card-title">
+                                                {int.name}
+                                            </h5>
+                                            <p className="card-text">
+                                                {int.description}
+                                            </p>
+                                            <div className="d-grid gap-2 d-md-flex justify-content-md-end mb-4 mb-lg-3">
+                                                {likes[index] ? (
 
                                                     <svg xmlns="http://www.w3.org/2000/svg"
                                                         width="30"
@@ -125,23 +125,23 @@ return (
 
                                                 )}
 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
-            ))}
-        </div>
-        <a href={"#"}
-            className="btn btn-primary"
-            role="button"
-            data-bs-toggle="button"
-            onClick={handleSendData}
-        >Envía tus descubrimientos</a>
-    </div>
-</>
-);
+                <a href={"#"}
+                    className="btn btn-primary"
+                    role="button"
+                    data-bs-toggle="button"
+                    onClick={handleSendData}
+                >Envía tus descubrimientos</a>
+            </div>
+        </>
+    );
 }
 
 export default Insects

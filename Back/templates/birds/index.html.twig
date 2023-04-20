@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Birds index</h1>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -27,7 +27,7 @@
                 <td>{{ bird.link }}</td>
                 <td>{{ bird.song }}</td>
                 <td>
-                    <a href="{{ path('app_birds_show', {'id': bird.id}) }}">show</a>
+                    <a type="button" class="btn btn-warning" href="{{ path('app_birds_show', {'id': bird.id}) }}">show</a>
                     <a href="{{ path('app_birds_edit', {'id': bird.id}) }}">edit</a>
                 </td>
             </tr>
