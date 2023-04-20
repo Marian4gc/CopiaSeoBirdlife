@@ -1,43 +1,37 @@
+import Swal from 'sweetalert2';
 import AllData from "../results/AllData";
 
 function UsersList() {
-
-
   const token = localStorage.getItem("loggedAppUser");
   const role = localStorage.getItem("role");
 
   console.log(token)
 
-  try {
-
-    // useEffect(() => {
-
-    if (role == ['ROLE_ADMIN,ROLE_USER']) {
-      console.log(role[1])
-      const axiosRequest = async () => {
-
-        await axios.get(DASHBOARD_URL, {
+  if (role == ['ROLE_ADMIN,ROLE_USER']) {
+    console.log(role[1])
+    const axiosRequest = async () => {
+      try {
+        const response = await axios.get(DASHBOARD_URL, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
-        })
-          //    .then((response) => response.json())
-          .then(data => console.log(data.data))
+        });
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
       }
-
-    } else {
-      return <h1>no está autorizado</h1>
-    }
-
-    axiosRequest()
-
-    // }, [])
-
-
-  } catch {
-
-    console.log('Algo salio mal...')
-
+    };
+    axiosRequest();
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No estás autorizado',
+      confirmButtonText: 'OK'
+    }).then(() => {
+      window.location.href = '/login';
+    });
+    return;
   }
 
   return (
@@ -45,7 +39,7 @@ function UsersList() {
       <h1>ESTAS EN LA USERLIST</h1>
       <AllData />
     </div>
-  )
+  );
 }
 
-export default UsersList
+export default UsersList;
