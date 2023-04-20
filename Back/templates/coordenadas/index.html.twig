@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coordenadas index{% endblock %}
+
+{% block body %}
+    <h1>Coordenadas index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Longitud</th>
+                <th>Latitud</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coordenada in coordenadas %}
+            <tr>
+                <td>{{ coordenada.id }}</td>
+                <td>{{ coordenada.longitud }}</td>
+                <td>{{ coordenada.latitud }}</td>
+                <td>
+                    <a href="{{ path('app_coordenadas_show', {'id': coordenada.id}) }}">show</a>
+                    <a href="{{ path('app_coordenadas_edit', {'id': coordenada.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_coordenadas_new') }}">Create new</a>
+{% endblock %}
