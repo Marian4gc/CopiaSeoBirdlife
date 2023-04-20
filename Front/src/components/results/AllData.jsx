@@ -4,12 +4,28 @@ import butterfly from '../images/butterfly.svg';
 
 function AllData() {
     const [data, setData] = useState([]);
+    const [data2, setData2] = useState([]);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/totaldata/allbirds')
-            .then((response) => response.json())
-            .then((data) => setData(data));
+        Promise.all([
+            fetch('http://127.0.0.1:8000/totaldata/allbirds'),
+            fetch('http://127.0.0.1:8000/coordenadas/all')
+        ])
+            .then(([response1, response2]) => Promise.all([response1.json(), response2.json()]))
+            .then(([data, data2]) => {
+                setData(data);
+                setData2(data2);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+            });
     }, []);
+
+    // useEffect(() => {
+    //     fetch('http://127.0.0.1:8000/totaldata/allbirds')
+    //         .then((response) => response.json())
+    //         .then((data) => setData(data));
+    // }, []);
 
     const aves = {
         'Abejaruco europeo': 'Abejaruco europeo',
@@ -92,6 +108,22 @@ function AllData() {
                         <thead>
                             <tr>
                                 <th>Insectos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Object.values(insectosArr).map((item, index) => (
+                                <tr key={index}>
+                                    <td>{item.name}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </Table>
+                </div>
+                <div className="col-md-4">
+                    <Table striped bordered hover>
+                        <thead>
+                            <tr>
+                                <th>Coodenadas</th>
                             </tr>
                         </thead>
                         <tbody>
