@@ -77,6 +77,8 @@ function Login() {
                         <div className="d-flex flex-column align-items-center">
                             <h1>¡Bienvenid@, {username}!</h1>
                             <a href='/Map' className='mt-5 btn-login btnAzul'>Comienza tu aventura</a>
+
+                            <a href='/userlist' className='mt-5 btn-login btnAzul'>Hola admin</a>
                         </div>
                     </div>
 
