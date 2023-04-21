@@ -31,7 +31,7 @@
 }
 
 .cosa {
-    margin-right: 2px !important;
+    margin-right: 12px !important;
     align-items: stretch;
 }
 
@@ -76,6 +76,13 @@
     .encabezadoGeneral img {
         max-width: 50%;
     }
+    #gorrionDer{ display: none;}
+    #gorrionIz{ width: 25%;}
+    .ojo{  margin: 7px 12px 0 12px;}
+    .cosa {
+        margin-right:0 !important;
+    }
+    
 }
 .corazon{ margin: 7px 12px 0 12px;}
 .mini-player{ margin: 0 12px;}
