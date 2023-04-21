@@ -136,7 +136,7 @@ return (
             role="button"
             data-bs-toggle="button"
             onClick={handleSendData}
-        >Busca los insectos</a>
+        >Envía las plantas</a>
     </div>
 </>
 );

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import icono from '../images/iconoUbicacion.svg';
+import location from '../images/location.png';
 
 import Coordinates from './Coordinates';
 import Date from '../date/TodayDate';
@@ -43,16 +44,17 @@ class Map extends Component {
     render() {
         return (
             <>
-            <div className='success d-flex container justify-content-center'>
-            <Coordinates />
-                </div>
-            <Date />
+                        <div className="d-flex justify-content-around encabezadoGeneral">
+                <img src={location} id="location" />
+                <h1>Mi ubicación actual</h1>
+                <img src={location} id="location" />
+            </div>
+                <Date />
                 <div className='d-flex container justify-content-center mt-3' id="map" style={{ height: '400px', width: '400px' }} >
                 </div>
-                <div className="d-flex flex-column align-items-center mt-5">
-                            <h2>Envía tu Ubicación!</h2>
-                            <a href='/Discovery' className='mt-5 btn-login btnAzul'>Enviar</a>
-                        </div>
+                <div className='success d-flex container justify-content-center'>
+                    <Coordinates />
+                </div>
             </>
         );
     }

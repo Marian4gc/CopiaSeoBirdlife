@@ -133,12 +133,12 @@ function Insects() {
                         </div>
                     ))}
                 </div>
-                <a href={"#"}
+                <a href={"/Thanks"}
                     className="btn btn-primary"
                     role="button"
                     data-bs-toggle="button"
                     onClick={handleSendData}
-                >Envía tus descubrimientos</a>
+                >Envía los insectos</a>
             </div>
         </>
     );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import location from '../images/location.png';
+
 import axios from 'axios';
 
 function Coordinates() {
@@ -39,15 +39,14 @@ function Coordinates() {
 
     return (
         <div className="mapa">
-            <div className="d-flex justify-content-around encabezadoGeneral">
-                <img src={location} id="location" />
-                <h1>Mi ubicación actual</h1>
-                <img src={location} id="location" />
-            </div>
             <div className="d-flex flex-column align-items-center mt-3">
                 <p>Latitud: {posicion[0]}</p>
                 <p>Longitud: {posicion[1]}</p>
-                <button onClick={enviarCoordenadas}>Enviar coordenadas</button>
+                {/* <button onClick={enviarCoordenadas}>Enviar coordenadas</button> */}
+                <div className="d-flex flex-column align-items-center mt-5">
+                    <h2>Envía tu Ubicación!</h2>
+                    <a href='/Discovery' onClick={enviarCoordenadas} className='mt-5 btn-login btnAzul'>Enviar corrdenadas</a>
+                </div>
             </div>
         </div>
     )

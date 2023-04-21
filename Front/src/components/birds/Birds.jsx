@@ -151,7 +151,7 @@ function Birds() {
                     role="button"
                     data-bs-toggle="button"
                     onClick={handleSendData}
-                >Busca las plantas</a>
+                >Envía las aves</a>
             </div>
         </>
     );
