@@ -44,11 +44,11 @@ class Map extends Component {
     render() {
         return (
             <>
-                        <div className="d-flex justify-content-around encabezadoGeneral">
-                <img src={location} id="location" />
-                <h1>Mi ubicación actual</h1>
-                <img src={location} id="location" />
-            </div>
+                <div className="d-flex justify-content-around encabezadoGeneral">
+                    <img src={location} id="location" />
+                    <h1>Mi ubicación actual</h1>
+                    <img src={location} id="location" />
+                </div>
                 <Date />
                 <div className='d-flex container justify-content-center mt-3' id="map" style={{ height: '400px', width: '100%' }} >
                 </div>

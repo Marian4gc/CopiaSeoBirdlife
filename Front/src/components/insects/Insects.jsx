@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import butterfly from '../images/butterfly.svg';
-import '../birds/birds.css'
+import '../birds/birds.css';
+import Swal from 'sweetalert2';
 
 function Insects() {
 
@@ -59,6 +60,26 @@ function Insects() {
         // console.log("JSON.stringify(selectedBirdsData):", jsonData);
 
         sendData(jsonData);
+
+        Swal.fire({
+            title: '¿Has terminado tu excusión?',
+            text: "Puedes terminar, o seguir con la búsqueda",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Sí, he terminado!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Gracias por tu ayuda!',
+                    '',
+                    'success'
+                ).then(() => {
+                    window.location.href = '/thanks';
+                });
+            }
+        });
     };
 
 
@@ -133,12 +154,16 @@ function Insects() {
                         </div>
                     ))}
                 </div>
-                <a href={"/Thanks"}
-                    className="btn btn-primary"
-                    role="button"
-                    data-bs-toggle="button"
-                    onClick={handleSendData}
-                >Envía los insectos</a>
+                <h2 className="pb-2 text-center mt-5">Ahora envía todas los insectos que has visto</h2>
+                <div className="d-flex justify-content-center mt-3">
+                    <a href={"#"}
+                        className="btnb"
+                        role="button"
+                        data-bs-toggle="button"
+                        onClick={handleSendData}
+                    >Envía los insectos
+                    </a>
+                </div>
             </div>
         </>
     );

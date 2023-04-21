@@ -22,27 +22,27 @@ function App() {
       element:<> <Home />  </>
     },
     { 
-      path:"/Register",
+      path:"/register",
       element:<><Register />  </>
     },
     {
-      path:"/Login",
+      path:"/login",
       element:<><Login /> </>
     },
     {
-      path:"/Map",
+      path:"/map",
       element:<><Map /> </>
     },
     {
-      path:"/Discovery",
+      path:"/discovery",
       element:<> <Birds /> <Plants /> <Insects />  </>
     },
     {
-      path:"/Thanks",
+      path:"/thanks",
       element:<> <Thanks /></>
     },
     {
-      path:"/Results",
+      path:"/results",
       element:<><AllData /></>
     },
     {

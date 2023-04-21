@@ -85,7 +85,7 @@ function Login() {
                     <div className='success d-flex container justify-content-center mt-7'>
                         <div className="d-flex flex-column align-items-center">
                             <h1>¡Bienvenid@, {username}!</h1>
-                            <a href='/Map' className='mt-5 btn-login btnAzul'>Comienza tu aventura</a>
+                            <a href='/map' className='mt-5 btn-login btnAzul'>Comienza tu aventura</a>
 
                             <a href='/userlist' className='greenbtn mt-3'>¡Hola admin!</a>
                         </div>
