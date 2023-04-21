@@ -45,13 +45,11 @@ function AllData() {
         Castaño: 'Castaño',
         'Jara Pringosa': 'Jara Pringosa',
         'Plátano de paseo': 'Plátano de paseo',
-
     };
 
     const insectos = {
         Abeja: 'Abeja',
         Chupaleche: 'Chupaleche',
-
     };
 
     const avesArr = data.filter((item) => aves[item.name]);
@@ -65,16 +63,16 @@ function AllData() {
                 <h1>Avistamientos totales</h1>
                 <img src={search} id="search" />
             </div>
-            <div className= "d-flex justify-content-center gap-3 mt-7">
-            <a type="button" class="btn btn-warning" href="/"><i class="bi bi-arrow-left"></i> Volver a inicio </a>
-            <a type="button" class="btn btn-warning" href="http://127.0.0.1:8000/birds/">Ir tablas a back <i class="bi bi-arrow-right"></i> </a>
+            <div className="d-flex justify-content-center gap-3 mt-7">
+                <a type="button" class="btn btn-warning" href="/"><i class="bi bi-arrow-left"></i> Volver a inicio </a>
+                <a type="button" class="btn btn-warning" href="http://127.0.0.1:8000/birds/">Ir tablas a back <i class="bi bi-arrow-right"></i> </a>
             </div>
             <div className="row mt-7">
                 <div className="col-md-4">
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th style={{backgroundColor: 'lightblue'}}>Aves</th>
+                                <th style={{ backgroundColor: 'lightblue' }}>Aves</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -90,7 +88,7 @@ function AllData() {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th style={{backgroundColor: 'lightblue'}}>Plantas</th>
+                                <th style={{ backgroundColor: 'lightblue' }}>Plantas</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -106,7 +104,7 @@ function AllData() {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th style={{backgroundColor: 'lightblue'}}>Insectos</th>
+                                <th style={{ backgroundColor: 'lightblue' }}>Insectos</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -122,7 +120,7 @@ function AllData() {
                     <Table striped bordered hover>
                         <thead>
                             <tr>
-                                <th style={{backgroundColor: 'lightblue'}}>Coodenadas</th>
+                                <th style={{ backgroundColor: 'lightblue' }}>Coodenadas</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -36,7 +36,7 @@ function UsersList() {
 
   return (
     <div>
-      <h1 className='text-center'>Bienvenid@ Admin</h1>
+      <h1 className='text-center mt-5'>Bienvenid@ Admin</h1>
       <AllData />
     </div>
   );
