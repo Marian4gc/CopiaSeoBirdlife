@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import plant from '../images/plant.svg';
-import '../birds/birds.css'
+import '../birds/birds.css';
+import Swal from 'sweetalert2';
 
 function Plants() {
 
@@ -59,6 +60,14 @@ function Plants() {
             // console.log("JSON.stringify(selectedBirdsData):", jsonData);
     
             sendData(jsonData);
+
+            Swal.fire({
+                icon: 'success',
+                title: '¡Gracias!',
+                text: 'Has enviado las plantas'
+            }).then(() => {
+                window.location.href = '#butterfly';
+            });
         };
     
 
@@ -131,12 +140,16 @@ return (
                 </div>
             ))}
         </div>
-        <a href={"#butterfly"}
-            className="btn btn-primary"
-            role="button"
-            data-bs-toggle="button"
-            onClick={handleSendData}
-        >Envía las plantas</a>
+        <h2 className="pb-2 text-center mt-5">Ahora envía todas las plantas que has visto</h2>
+                <div className="d-flex justify-content-center mt-3">
+                    <a href={"#"}
+                        className="btnb"
+                        role="button"
+                        data-bs-toggle="button"
+                        onClick={handleSendData}
+                    >Envía las plantas
+                    </a>
+                </div>
     </div>
 </>
 );

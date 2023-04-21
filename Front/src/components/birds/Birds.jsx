@@ -71,9 +71,9 @@ function Birds() {
             icon: 'success',
             title: '¡Gracias!',
             text: 'Has enviado las aves'
-          }).then(() => {
+        }).then(() => {
             window.location.href = '#plant';
-          });
+        });
     };
 
 
