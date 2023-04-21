@@ -50,7 +50,7 @@ class Map extends Component {
                 <img src={location} id="location" />
             </div>
                 <Date />
-                <div className='d-flex container justify-content-center mt-3' id="map" style={{ height: '400px', width: '400px' }} >
+                <div className='d-flex container justify-content-center mt-3' id="map" style={{ height: '400px', width: '100%' }} >
                 </div>
                 <div className='success d-flex container justify-content-center'>
                     <Coordinates />

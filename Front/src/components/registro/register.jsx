@@ -3,7 +3,8 @@ import axios from '../../api/axios'
 import Logo from '../images/logoAventurero.png';
 import GolondrinaL from '../images/golondrinaLeft.png';
 import GolondrinaR from '../images/golondrinaRight.png';
-import './register.css'
+import './register.css';
+import Swal from 'sweetalert2';
 
 
 const REGISTRATION_URL = '/api/register'
@@ -30,6 +31,15 @@ function Register() {
             setSuccess(true)
         } catch {
             console.log('No funciona')
+            // alert('Este usuario ya está registrado, por favor, elige otro')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Este usuario ya está registrado, por favor, elige otro',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.href = '/register';
+            });
         }
     }
 
