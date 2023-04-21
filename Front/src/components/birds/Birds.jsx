@@ -6,7 +6,7 @@ import PetirojoIzquierda from '../images/petirojoIzq.png';
 import PetirojoDerecha from '../images/petirojoDcha.png';
 import Song from './Song';
 
-
+import Swal from 'sweetalert2';
 
 
 function Birds() {
@@ -66,6 +66,14 @@ function Birds() {
         // console.log("JSON.stringify(selectedBirdsData):", jsonData);
 
         sendData(jsonData);
+
+        Swal.fire({
+            icon: 'success',
+            title: '¡Gracias!',
+            text: 'Has enviado las aves'
+          }).then(() => {
+            window.location.href = '#plant';
+          });
     };
 
 
@@ -146,14 +154,16 @@ function Birds() {
                         </div>
                     ))}
                 </div>
-
-
-                <a href={"#plant"}
-                    className="btn btn-primary"
-                    role="button"
-                    data-bs-toggle="button"
-                    onClick={handleSendData}
-                >Envía las aves</a>
+                <h2 className="pb-2 text-center mt-5">Ahora envía todas las aves que has visto</h2>
+                <div className="d-flex justify-content-center mt-3">
+                    <a href={"#"}
+                        className="btnb"
+                        role="button"
+                        data-bs-toggle="button"
+                        onClick={handleSendData}
+                    >Envía las aves
+                    </a>
+                </div>
             </div>
         </>
     );
