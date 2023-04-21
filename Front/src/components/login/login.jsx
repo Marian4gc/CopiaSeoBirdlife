@@ -4,6 +4,7 @@ import './login.css';
 import Logo from '../images/logoAventurero.png';
 import GolondrinaL from '../images/golondrinaLeft.png';
 import GolondrinaR from '../images/golondrinaRight.png';
+import Swal from 'sweetalert2';
 
 const LOGIN_URL = '/api/login_check';
 import jwtDecode from 'jwt-decode';
@@ -58,8 +59,16 @@ function Login() {
 
             console.log('¡Estás logead@!')
 
-        }catch (err){
-            console.log('Oh vaya! No funciona ...')
+        }catch {
+            console.log('No funciona')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Comprueba si está bien escrito tu usuario y contraseña',
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.href = '/login';
+            });
         }
     }
 
@@ -84,7 +93,7 @@ function Login() {
 
                 ) : (
                     <div id='secLogin' className='d-flex container justify-content-center mt-5'>
-                        <h1>Login</h1>
+                        <h1>Inicio de sesión</h1>
                         <div className='box-fichaje'>
                             <form onSubmit={handleSubmit}>
                                 <label htmlFor='username' className="form-label">Usuario</label>

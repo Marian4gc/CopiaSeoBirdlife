@@ -36,16 +36,16 @@ function Birds() {
 
     function sendData(selectedBirdsData) {
         axios.post('http://127.0.0.1:8000/totaldata/list', selectedBirdsData, {
-                headers: {
-                    "Content-Type": "application/json",
-                }
-            })
-        .then((response) => {
-            console.log(response.data);
+            headers: {
+                "Content-Type": "application/json",
+            }
         })
-        .catch((error) => {
-            console.error(error);
-        },[]);
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            }, []);
     }
 
 
@@ -62,7 +62,7 @@ function Birds() {
         }));
 
         console.log("Selected birds data:", selectedBirdsData);
-        const jsonData = JSON.stringify({ birds: selectedBirdsData});
+        const jsonData = JSON.stringify({ birds: selectedBirdsData });
         // console.log("JSON.stringify(selectedBirdsData):", jsonData);
 
         sendData(jsonData);
@@ -146,6 +146,8 @@ function Birds() {
                         </div>
                     ))}
                 </div>
+
+
                 <a href={"#plant"}
                     className="btn btn-primary"
                     role="button"
