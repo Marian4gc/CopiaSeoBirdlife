@@ -104,7 +104,7 @@ function Birds() {
                                             <p className="card-text">
                                                 {int.description}
                                             </p>
-                                            <div className="d-grid gap-2 d-md-flex justify-content-md-end mb-4 mb-lg-3">
+                                            <div className="d-flex gap-2 d-md-flex justify-content-end mb-4 mb-lg-3">
                                                 {likes[index] ? (
 
                                                     <svg xmlns="http://www.w3.org/2000/svg"
