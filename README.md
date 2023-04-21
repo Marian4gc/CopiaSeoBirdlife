@@ -41,6 +41,9 @@ SEO Bird Life Aventurer@s, is the Aventurer@s club of SEO BirdLife. Focused on a
 | [Belén Zumalacarregui](https://github.com/belenz77) | Developer | https://github.com/belenz77 |
 | [Gema Adame](https://github.com/GemaAdeAdame) | Developer | https://github.com/GemaAdeAdame |
 
+[<img src="https://avatars.githubusercontent.com/u/117035764?v=4" width=115><br><sub>Marian García - Product Owner, Developer</sub>](https://github.com/Marian4gc)|[<img src="https://avatars.githubusercontent.com/u/116807861?v=4" width=115><br><sub>Ana Delgado - Scrum Master, Developer </sub>](https://github.com/anadelccc)|[<img src="https://avatars.githubusercontent.com/u/85337087?v=4" width=115><br><sub>Belén Zumalacarregui - Developer</sub>](https://github.com/belenz77) |[<img src="https://avatars.githubusercontent.com/u/117035764?v=4" width=115><br><sub>Micaela Huertas - Developer</sub>](https://github.com/hmicae) | [<img src="https://avatars.githubusercontent.com/u/101136933?v=4" width=115><br><sub>Gema Adame - Developer</sub>](https://github.com/GemaAdeAdame)|
+| :---: | :---: | :---: |  :---: |  :---: |
+
 ## :computer: Technologies <a name = "technologies"></a>
 
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
