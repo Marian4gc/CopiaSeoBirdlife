@@ -4,6 +4,9 @@ namespace App\Tests;
 
 use Symfony\Component\Panther\PantherTestCase;
 
+use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use App\Entity\Plant;
+
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;
@@ -176,4 +179,69 @@ public function testPageLoadTime(): void
     $expectedTime = 3;
     $this->assertLessThanOrEqual($expectedTime, $time);
 }
+}
+
+
+//comprobar Api Plant
+class PlantTest extends KernelTestCase
+{
+    private $entityManager;
+
+    protected function setUp(): void
+    {
+        $kernel = self::bootKernel();
+
+        $this->entityManager = $kernel->getContainer()
+            ->get('doctrine')
+            ->getManager();
+    }
+
+    public function testCreatePlant(): void
+    {
+        $plant = new Plant();
+        $plant->setName('Test Plant');
+        $plant->setDescription('This is a test plant');
+        $plant->setImage('test_image.jpg');
+
+        $this->entityManager->persist($plant);
+        $this->entityManager->flush();
+
+        $this->assertNotNull($plant->getId());
+        $this->assertSame('Test Plant', $plant->getName());
+        $this->assertSame('This is a test plant', $plant->getDescription());
+        $this->assertSame('test_image.jpg', $plant->getImage());
+    }
+
+    public function testUpdatePlant(): void
+    {
+        $plant = $this->entityManager
+            ->getRepository(Plant::class)
+            ->findOneBy(['name' => 'Test Plant']);
+
+        $plant->setName('Updated Plant');
+        $plant->setDescription('This plant has been updated');
+        $plant->setImage('updated_image.jpg');
+
+        $this->entityManager->flush();
+
+        $this->assertSame('Updated Plant', $plant->getName());
+        $this->assertSame('This plant has been updated', $plant->getDescription());
+        $this->assertSame('updated_image.jpg', $plant->getImage());
+    }
+
+    public function testDeletePlant(): void
+    {
+        $plant = $this->entityManager
+            ->getRepository(Plant::class)
+            ->findOneBy(['name' => 'Updated Plant']);
+
+        $this->entityManager->remove($plant);
+        $this->entityManager->flush();
+
+        $plant = $this->entityManager
+            ->getRepository(Plant::class)
+            ->findOneBy(['name' => 'Updated Plant']);
+
+        $this->assertNull($plant);
+    }
 }
