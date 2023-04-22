@@ -74,7 +74,7 @@ function Birds() {
             title: '¡Gracias!',
             text: 'Has enviado las aves'
         }).then(() => {
-            window.location.href = '#rutaPlant';
+            window.location.href = '#plant';
         });
     };
 
