@@ -63,27 +63,27 @@ function Insects() {
     };
 
     const finish = () => {
-    Swal.fire({
-        title: '¿Has terminado tu excusión?',
-        text: "Puedes terminar, o seguir con la búsqueda",
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: '¡Sí, he terminado!',
-        cancelButtonText: 'Volver'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire(
-                'Gracias por tu ayuda!',
-                '',
-                'success'
-            ).then(() => {
-                window.location.href = '/thanks';
-            });
-        }
-    });
-}
+        Swal.fire({
+            title: '¿Has terminado tu excusión?',
+            text: "Puedes terminar, o seguir con la búsqueda",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Sí, he terminado!',
+            cancelButtonText: 'Volver'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Gracias por tu ayuda!',
+                    '',
+                    'success'
+                ).then(() => {
+                    window.location.href = '/thanks';
+                });
+            }
+        });
+    }
 
     return (
         <>
@@ -157,7 +157,7 @@ function Insects() {
                     ))}
                 </div>
                 <h2 className="pb-2 text-center mt-5">Por último envía todos los insectos que has visto</h2>
-                <div className="d-flex justify-content-around mt-5">
+                <div className="d-flex justify-content-center mt-3">
                     <a href={"#butterflyR"}
                         className="btnb"
                         role="button"
@@ -165,12 +165,16 @@ function Insects() {
                         onClick={handleSendData}
                     >Envía los insectos
                     </a>
+                </div>
+
+                <h2 className="pb-2 text-end mt-5">Puedes terminar tu aventura</h2>
+                <div class="d-flex justify-content-end">
                     <a href={"#"}
-                        className="btnb"
+                        className="btnf"
                         role="button"
                         data-bs-toggle="button"
                         onClick={finish}
-                    >Termina tu aventura
+                    >Finalizar
                     </a>
                 </div>
             </div>
