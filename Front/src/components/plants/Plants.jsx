@@ -76,9 +76,9 @@ return (
     <>
     <div className="container px-4 py-5" id="hanging-icons">
     <div className="d-flex justify-content-around encabezadoGeneral">
-                    <img src={plant} id="plant" />
+                    <img src={plant} id="plantR" />
                     <h1>Sigue la pista de las plantas</h1>
-                    <img src={plant} id="plant" />
+                    <img src={plant} id="plantL" />
                 </div>
         <h2 className="pb-2 border-bottom mt-7" >Plantas</h2>
         <div className="row">

@@ -13,7 +13,7 @@ function Thanks() {
 
             <div style={{ position: 'relative' }}>
                 <img src={bocadillo} alt="Bocadillo de diálogo" style={{ width: '200px' }} />
-                <p style={{ position: 'absolute', top: '43%', left: '50%', transform: 'translate(-50%, -50%)', color: 'black' }}>¡Gracias por tu ayuda aventurer@!</p>
+                <p className='text-center' style={{ position: 'absolute', top: '43%', left: '50%', transform: 'translate(-50%, -50%)', color: 'black' }}>¡Gracias por tu ayuda aventurer@!</p>
             </div>
 
             <h2 className="pb-2 text-center mt-5" style={{ color: 'white' }}>¿Has olvidado mandar algún avistamiento? ¡Puedes volver!</h2>

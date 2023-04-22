@@ -89,9 +89,9 @@ function Insects() {
         <>
             <div className="container px-4 py-5" id="hanging-icons">
                 <div className="d-flex justify-content-around encabezadoGeneral">
-                    <img src={butterfly} id="butterfly" />
+                    <img src={butterfly} id="butterflyR" />
                     <h1>Sigue la pista de los insectos</h1>
-                    <img src={butterfly} id="butterfly" />
+                    <img src={butterfly} id="butterflyL" />
                 </div>
                 <h2 className="pb-2 border-bottom mt-7">Insectos</h2>
                 <div className="row">
@@ -156,9 +156,9 @@ function Insects() {
                         </div>
                     ))}
                 </div>
-                <h2 className="pb-2 text-center mt-5">Por último envía todas los insectos que has visto</h2>
+                <h2 className="pb-2 text-center mt-5">Por último envía todos los insectos que has visto</h2>
                 <div className="d-flex justify-content-around mt-5">
-                    <a href={"#butterfly"}
+                    <a href={"#butterflyR"}
                         className="btnb"
                         role="button"
                         data-bs-toggle="button"
