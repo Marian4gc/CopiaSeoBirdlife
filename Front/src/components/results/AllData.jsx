@@ -67,8 +67,8 @@ function AllData() {
                 <a type="button" class="btn btn-warning" href="/"><i class="bi bi-arrow-left"></i> Volver a inicio </a>
                 <a type="button" class="btn btn-warning" href="http://127.0.0.1:8000/birds/">Ir tablas a back <i class="bi bi-arrow-right"></i> </a>
             </div>
-            <div className="row mt-7">
-                <div className="col-md-4">
+            <div className="row mt-7 d-flex flex-wrap">
+                <div className="col-md-3">
                     <Table striped bordered hover>
                         <thead>
                             <tr>
@@ -84,7 +84,7 @@ function AllData() {
                         </tbody>
                     </Table>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                     <Table striped bordered hover>
                         <thead>
                             <tr>
@@ -100,7 +100,7 @@ function AllData() {
                         </tbody>
                     </Table>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                     <Table striped bordered hover>
                         <thead>
                             <tr>
@@ -116,7 +116,7 @@ function AllData() {
                         </tbody>
                     </Table>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                     <Table striped bordered hover>
                         <thead>
                             <tr>
