@@ -35,7 +35,7 @@ function Register() {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Este usuario ya está registrado, por favor, elige otro',
+                text: 'Este nombre de usuario ya está registrado, por favor, elige otro',
                 confirmButtonText: 'OK'
             }).then(() => {
                 window.location.href = '/register';

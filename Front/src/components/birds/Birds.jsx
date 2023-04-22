@@ -9,6 +9,7 @@ import Song from './Song';
 import Swal from 'sweetalert2';
 
 
+
 function Birds() {
     //api que recibe datos de los pajaritos
     const [repo, setRepo] = useState([]);
@@ -55,6 +56,7 @@ function Birds() {
         const selectedBirds = repo.filter((int, index) => likes[index]);
         if (selectedBirds.length === 0) {
             console.log("No hay aves seleccionadas");
+            alert("¿No has visto ninguna? No te preocupes, pasa a las plantas!");
             return;
         }
         const selectedBirdsData = selectedBirds.map((bird) => ({
@@ -72,7 +74,7 @@ function Birds() {
             title: '¡Gracias!',
             text: 'Has enviado las aves'
         }).then(() => {
-            window.location.href = '#plant';
+            window.location.href = '#rutaPlant';
         });
     };
 

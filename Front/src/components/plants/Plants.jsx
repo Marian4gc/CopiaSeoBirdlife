@@ -79,7 +79,7 @@ return (
                     <h1>Sigue la pista de las plantas</h1>
                     <img src={plant} id="plant" />
                 </div>
-        <h2 className="pb-2 border-bottom mt-7">Plantas</h2>
+        <h2 className="pb-2 border-bottom mt-7" >Plantas</h2>
         <div className="row">
             {plants.map((int, index) => (
                 <div className="col-lg-6 mb-4">
@@ -100,7 +100,7 @@ return (
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
-                                    <h5 className="card-title">
+                                    <h5 className="card-title" id="rutaPlant">
                                         {int.name}
                                     </h5>
                                     <p className="card-text">

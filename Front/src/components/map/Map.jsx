@@ -3,6 +3,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import icono from '../images/iconoUbicacion.svg';
 import location from '../images/location.png';
+import './map.css'
 
 import Coordinates from './Coordinates';
 import Date from '../date/TodayDate';
@@ -45,9 +46,9 @@ class Map extends Component {
         return (
             <>
                 <div className="d-flex justify-content-around encabezadoGeneral">
-                    <img src={location} id="location" />
+                    <img src={location} id="locationL" />
                     <h1>Mi ubicación actual</h1>
-                    <img src={location} id="location" />
+                    <img src={location} id="locationR" />
                 </div>
                 <Date />
                 <div className='d-flex container justify-content-center mt-3' id="map" style={{ height: '400px', width: '100%' }} >

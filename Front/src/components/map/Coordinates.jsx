@@ -44,7 +44,7 @@ function Coordinates() {
                 <p>Longitud: {posicion[1]}</p>
                 {/* <button onClick={enviarCoordenadas}>Enviar coordenadas</button> */}
                 <div className="d-flex flex-column align-items-center mt-5">
-                    <h2>Envía tu Ubicación!</h2>
+                    <h2 className="text-center">Para poder recopilar bien los datos, y entender el comportamiento de las aves, necesitamos que envíes tu Ubicación</h2>
                     <a href='/Discovery' onClick={enviarCoordenadas} className='mt-5 btn-login btnAzul'>Enviar corrdenadas</a>
                 </div>
             </div>

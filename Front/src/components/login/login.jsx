@@ -63,7 +63,7 @@ function Login() {
             console.log('No funciona')
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
+                title: 'Algo ha fallado...',
                 text: 'Comprueba si está bien escrito tu usuario y contraseña',
                 confirmButtonText: 'OK'
             }).then(() => {

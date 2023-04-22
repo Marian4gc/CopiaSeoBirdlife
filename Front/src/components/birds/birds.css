@@ -6,8 +6,6 @@
 
 }
 
-
-
 .card-img img {
     max-width: 100%;
     height: auto;
@@ -64,7 +62,6 @@
 @media (max-width: 768px) {
     .card-img {
         margin: 0;
-
     }
 
     .encabezadoGeneral h1 {
