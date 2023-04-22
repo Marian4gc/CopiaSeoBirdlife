@@ -64,11 +64,12 @@ function Insects() {
         Swal.fire({
             title: '¿Has terminado tu excusión?',
             text: "Puedes terminar, o seguir con la búsqueda",
-            icon: 'warning',
+            icon: 'question',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: '¡Sí, he terminado!'
+            confirmButtonText: '¡Sí, he terminado!',
+            cancelButtonText: 'Volver'
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(

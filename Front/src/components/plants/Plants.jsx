@@ -49,6 +49,7 @@ function Plants() {
             const selectedPlants = plants.filter((int, index) => likes[index]);
             if (selectedPlants.length === 0) {
                 console.log("No hay plantas seleccionadas");
+                alert("¿No has visto ninguna? No te preocupes, pasa a los insectos!");
                 return;
             }
             const selectedPlantsData = selectedPlants.map((plant) => ({
