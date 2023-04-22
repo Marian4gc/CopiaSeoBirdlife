@@ -60,29 +60,30 @@ function Insects() {
         // console.log("JSON.stringify(selectedBirdsData):", jsonData);
 
         sendData(jsonData);
-
-        Swal.fire({
-            title: '¿Has terminado tu excusión?',
-            text: "Puedes terminar, o seguir con la búsqueda",
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: '¡Sí, he terminado!',
-            cancelButtonText: 'Volver'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire(
-                    'Gracias por tu ayuda!',
-                    '',
-                    'success'
-                ).then(() => {
-                    window.location.href = '/thanks';
-                });
-            }
-        });
     };
 
+    const finish = () => {
+    Swal.fire({
+        title: '¿Has terminado tu excusión?',
+        text: "Puedes terminar, o seguir con la búsqueda",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '¡Sí, he terminado!',
+        cancelButtonText: 'Volver'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Gracias por tu ayuda!',
+                '',
+                'success'
+            ).then(() => {
+                window.location.href = '/thanks';
+            });
+        }
+    });
+}
 
     return (
         <>
@@ -113,7 +114,7 @@ function Insects() {
                                     </div>
                                     <div className="col-md-8">
                                         <div className="card-body">
-                                            <h5 className="card-title">
+                                            <h5 className="card-title text-center">
                                                 {int.name}
                                             </h5>
                                             <p className="card-text">
@@ -155,14 +156,21 @@ function Insects() {
                         </div>
                     ))}
                 </div>
-                <h2 className="pb-2 text-center mt-5">Ahora envía todas los insectos que has visto</h2>
-                <div className="d-flex justify-content-center mt-3">
-                    <a href={"#"}
+                <h2 className="pb-2 text-center mt-5">Por último envía todas los insectos que has visto</h2>
+                <div className="d-flex justify-content-around mt-5">
+                    <a href={"#butterfly"}
                         className="btnb"
                         role="button"
                         data-bs-toggle="button"
                         onClick={handleSendData}
                     >Envía los insectos
+                    </a>
+                    <a href={"#"}
+                        className="btnb"
+                        role="button"
+                        data-bs-toggle="button"
+                        onClick={finish}
+                    >Termina tu aventura
                     </a>
                 </div>
             </div>

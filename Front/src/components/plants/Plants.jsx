@@ -101,7 +101,7 @@ return (
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
-                                    <h5 className="card-title" id="rutaPlant">
+                                    <h5 className="card-title text-center" id="rutaPlant">
                                         {int.name}
                                     </h5>
                                     <p className="card-text">

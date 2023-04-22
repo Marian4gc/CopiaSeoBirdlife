@@ -108,7 +108,7 @@ function Birds() {
                                     </div>
                                     <div className="col-md-8">
                                         <div className="card-body">
-                                            <h5 className="card-title">
+                                            <h5 className="card-title text-center">
                                                 {int.name}
                                             </h5>
                                             <p className="card-text">
@@ -156,7 +156,7 @@ function Birds() {
                         </div>
                     ))}
                 </div>
-                <h2 className="pb-2 text-center mt-5">Ahora envía todas las aves que has visto</h2>
+                <h2 className="pb-2 text-center mt-5">Envía todas las aves que has visto</h2>
                 <div className="d-flex justify-content-center mt-3">
                     <a href={"#"}
                         className="btnb"
