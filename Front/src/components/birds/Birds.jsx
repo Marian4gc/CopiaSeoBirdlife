@@ -88,9 +88,9 @@ function Birds() {
                     <img src={PetirojoDerecha} id="gorrionDer" />
                 </div>
 
-                <div className="mx-auto text-center mt-7" style={{width: "fit-content"}}>
-                    <p>Selecciona cada ave, planta e insecto que veas en tu recorrido, dando al icono del ojo:  </p><i class="bi bi-eye-slash-fill icon-large"></i>
-                    <p>A veces es complicado ver las aves, así que puedes oír su canto <i class="bi bi-mic-mute-fill icon-large"></i> y seleccionarla como que la has visto.</p>
+                <div className="mx-auto text-center mt-5" style={{width: "fit-content"}}>
+                    <p>Selecciona cada ave, planta e insecto que veas en tu recorrido, dando al icono del ojo: <i class="bi bi-eye-slash-fill icon-large"></i>  </p>
+                    <p>A veces es complicado ver las aves, así que puedes oír su canto<i class="bi bi-mic-mute-fill icon-large"></i> y seleccionarla como que la has visto.</p>
                     <p>¡Disfruta de tu visita a la naturaleza!</p>
                 </div>
                 

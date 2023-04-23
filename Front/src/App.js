@@ -5,12 +5,8 @@ import Register from './components/registro/register';
 import Birds from './components/birds/Birds'
 import Plants from './components/plants/Plants';
 import Thanks from './components/thanks/Thanks';
-
 import Map from './components/map/Map';
-
-import Start from './components/navBar/Start';
 import Insects from './components/insects/Insects';
-
 import AllData from './components/results/AllData';
 import UsersList from './components/dashboard/usersList';
 
