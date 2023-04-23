@@ -55,7 +55,7 @@ function Home() {
             </div>
 
             <div className="containerFlex">
-              <button className="greenbtn" onClick={handleEmpezarClick}>Empezar</button>
+              <button className="btnb mt-7" onClick={handleEmpezarClick}>Empezar</button>
             </div>
           </div>
         </div>
