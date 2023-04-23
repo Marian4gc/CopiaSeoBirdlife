@@ -14,7 +14,7 @@ class DateController extends AbstractController
     {
         $fecha = new \DateTime();
         return new JsonResponse([
-            'fecha' => $fecha -> format('Y-m-d H:i:s')
+            'fecha' => $fecha -> format('d-m-Y H:i')
         ]);
 
         // $fecha = new fecha();

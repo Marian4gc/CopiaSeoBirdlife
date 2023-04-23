@@ -64,7 +64,7 @@ function AllData() {
                 <img src={search} id="search" />
             </div>
             <div className="d-flex justify-content-center gap-3 mt-7">
-                <a type="button" class="btn btn-warning" href="/"><i class="bi bi-arrow-left"></i> Volver a inicio </a>
+                <a type="button" class="btn btn-warning" href="/"><i class="bi bi-arrow-left"></i> Cerrar sesión </a>
                 <a type="button" class="btn btn-warning" href="http://127.0.0.1:8000/birds/">Ir al back <i class="bi bi-arrow-right"></i> </a>
             </div>
             <div className="row mt-7 d-flex flex-wrap">

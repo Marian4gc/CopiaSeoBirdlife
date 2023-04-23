@@ -30,7 +30,7 @@ function TodayDate() {
         );
     }
 
-    return <h2 className="text-center">Today is {fecha}</h2>;
+    return <h2 className="text-center">Hoy es {fecha}</h2>;
 }
 
 export default TodayDate;
