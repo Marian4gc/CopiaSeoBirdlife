@@ -25,6 +25,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "cypress": "^12.10.0",
     "typescript": "3.3.3"
   },
   "scripts": {
@@ -39,6 +40,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-
-  
 }
