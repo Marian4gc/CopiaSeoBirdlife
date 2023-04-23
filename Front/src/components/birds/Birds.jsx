@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './birds.css'
 import axios from 'axios';
-import PetirojoIzquierda from '../images/petirojoIzq.png';
-import PetirojoDerecha from '../images/petirojoDcha.png';
+import PetirojoIzquierda from '../images/petirojoIzq.svg';
+import PetirojoDerecha from '../images/petirojoDcha.svg';
 import Song from './Song';
 
 import Swal from 'sweetalert2';
@@ -87,6 +87,13 @@ function Birds() {
                     <h1>Sigue la pista de las aves</h1>
                     <img src={PetirojoDerecha} id="gorrionDer" />
                 </div>
+
+                <div className="mx-auto text-center mt-7" style={{width: "fit-content"}}>
+                    <p>Selecciona cada ave, planta e insecto que veas en tu recorrido, dando al icono del ojo:  </p><i class="bi bi-eye-slash-fill icon-large"></i>
+                    <p>A veces es complicado ver las aves, así que puedes oír su canto <i class="bi bi-mic-mute-fill icon-large"></i> y seleccionarla como que la has visto.</p>
+                    <p>¡Disfruta de tu visita a la naturaleza!</p>
+                </div>
+                
                 <h2 className="pb-2 border-bottom mt-7">Aves</h2>
                 <div className="row">
                     {repo.map((int, index) => (
@@ -158,7 +165,7 @@ function Birds() {
                 </div>
                 <h2 className="pb-2 text-center mt-5">Envía todas las aves que has visto</h2>
                 <div className="d-flex justify-content-center mt-3">
-                    <a href={"#"}
+                    <a href={"#plant"}
                         className="btnb"
                         role="button"
                         data-bs-toggle="button"

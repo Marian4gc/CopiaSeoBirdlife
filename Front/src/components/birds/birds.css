@@ -184,3 +184,10 @@
     transform: translateY(10px);
     transition: 100ms;
 }
+
+/* iconos de instrucciones */
+
+
+.icon-large {
+    font-size: 30px;
+}
