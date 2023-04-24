@@ -179,7 +179,7 @@
 
 .btnf:active {
     letter-spacing: 3px;
-    background-color:#ff4800;
+    background-color:#1C9BD5;
     color: hsl(0, 0%, 100%);
     box-shadow: rgba(28, 155, 213, 1) 0px 0px 0px 0px;
     transform: translateY(10px);
