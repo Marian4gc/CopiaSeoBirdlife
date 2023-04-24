@@ -84,39 +84,52 @@ Is the final project of the FullStack Web Development Bootcamp :woman_student:
 ## :link: Installation
 
 * First of all, you will need to clone this repository.
-
+```
 git clone https://github.com/Marian4gc/CopiaSeoBirdlife.git
- 
+``` 
 * You will see 2 folders, Back and Front.
    
 * Then navigate to the Backed folder
-  
+```  
 cd back
-  
+```  
 * Run this command to download the packages you need for symfony
- 
+``` 
 composer install
-   
+```   
 * Also run this command to update the database 
-
+```
 php bin/console doctrine:schema:update --force
- 
+ ```
 * Then navigate to the frontend folder
-
+```
 cd front
-
+```
 * Run this command to download the packages you need for React
-
+```
 npm install
-
+```
 * Also run this to see the backend
-
+```
 symfony server:start
-
+```
 * Finally run the following command in the front end to view the result in the browser
-
+```
 npm start
-
+```
 
 
 ¡ENJOY THE CODE 💚!
+
+##	:mag: Tests
+
+
+* Navigate to the frontend folder.
+```
+npm test
+``` 
+
+* Navigate to the backend folder.
+```
+ php bin/phpunit
+``` 
