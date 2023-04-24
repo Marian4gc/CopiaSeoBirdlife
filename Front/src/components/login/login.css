@@ -77,7 +77,8 @@ h1 {
     }
 
     #bird2 {
-        width: 40%
+        width: 30%;
+        margin-left: 0;
     }
 
 }
