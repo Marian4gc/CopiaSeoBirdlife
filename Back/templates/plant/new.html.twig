@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Plant{% endblock %}
+{% block title %}Nueva Planta{% endblock %}
 
 {% block body %}
    <div class="title-image-container3">
-    <img src="{{ asset('images/planta.png') }}" alt="Birds Image">
+    <img src="{{ asset('images/planta.png') }}" alt="Planta Image">
     <h1>Create new Plant</h1>
 </div>
 
     {{ include('plant/_form.html.twig') }}
 
-    <a type="button" class="btn btn-info" href="{{ path('app_plant_index') }}">Back to list</a>
+    <a type="button" class="btn btn-info" href="{{ path('app_plant_index') }}">Volver a la lista</a>
 {% endblock %}
