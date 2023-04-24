@@ -119,7 +119,6 @@ npm start
 ```
 
 
-¡ENJOY THE CODE 💚!
 
 ##	:mag: Tests
 
@@ -128,8 +127,15 @@ npm start
 ```
 npm test
 ``` 
+![testfront](https://user-images.githubusercontent.com/117035764/233987246-c6f74b82-7919-4030-8726-da0d0d5d2c4e.png)
 
 * Navigate to the backend folder.
 ```
  php bin/phpunit
 ``` 
+![testback](https://user-images.githubusercontent.com/117035764/233987744-a0cc414f-f4c5-4348-a0da-6e73fc2babd6.png)
+
+
+
+
+¡ENJOY THE CODE 💚!
