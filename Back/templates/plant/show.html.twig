@@ -6,7 +6,7 @@
    
     <div class="title-image-container3">
     <img src="{{ asset('images/plant.svg') }}" alt="plant Image">
-    <h1>Plant</h1>
+    <h1>Plantas</h1>
 </div>
 
     <table class="table table-striped">
@@ -30,9 +30,9 @@
         </tbody>
     </table>
 
-    <a  type="button" class="btn btn-info" href="{{ path('app_plant_index') }}">back to list</a>
+    <a  type="button" class="btn btn-info" href="{{ path('app_plant_index') }}">Volver a la lista</a>
 
-    <a type="button" class="btn btn-dark"  href="{{ path('app_plant_edit', {'id': plant.id}) }}">edit</a>
+    <a type="button" class="btn btn-dark"  href="{{ path('app_plant_edit', {'id': plant.id}) }}">Editar</a>
 
     {{ include('plant/_delete_form.html.twig') }}
 {% endblock %}
