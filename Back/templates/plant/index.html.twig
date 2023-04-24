@@ -7,9 +7,9 @@
         <img src="{{ asset('images/plant.svg') }}" alt="planta Image">
         <h1>Plant index</h1>
     </div>
-        <a class="btn btn-success" href="{{ path('app_plant_new') }}">Create new</a>
-        <a class= "btn btn-success" href="{{ path('app_birds_index') }}">Volver a birds</a>
-        <a class= "btn btn-success" href="{{ path('app_insect_index') }}">Volver a insects</a>
+        <a class="btn btn-success" href="{{ path('app_plant_new') }}">Crear Nuevo</a>
+        <a class= "btn btn-success" href="{{ path('app_birds_index') }}">Volver a aves</a>
+        <a class= "btn btn-success" href="{{ path('app_insect_index') }}">Volver a insectos</a>
 
     <table class="table table-striped table-hover">
         <thead>
@@ -18,7 +18,7 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Image</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -29,13 +29,13 @@
                 <td>{{ plant.description }}</td>
                 <td><img class="image" src={{ asset(plant.image) }} alt={{ plant.name }} width="100"></td>
                 <td>
-                    <a class="btn btn-warning" href="{{ path('app_plant_show', {'id': plant.id}) }}">show</a>
-                    <a class="btn btn-success1" href="{{ path('app_plant_edit', {'id': plant.id}) }}">edit</a>
+                    <a class="btn btn-warning" href="{{ path('app_plant_show', {'id': plant.id}) }}">Ver</a>
+                    <a class="btn btn-success1" href="{{ path('app_plant_edit', {'id': plant.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">No se han econtrado datos/td>
             </tr>
         {% endfor %}
         </tbody>
