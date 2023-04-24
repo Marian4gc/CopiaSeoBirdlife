@@ -7,9 +7,9 @@
 ## 📝 Table of Contents
 
 1. [Description](#description) 
-2. [Team members](#team-members) 
-3.[Design](#design)
-4. [Technical requirements](#technical-requirements)
+2. [Technical requirements](#technical-requirements) 
+3. [Team members](#team-members)
+4. [Design](#design)
 5. [Technologies](#technologies)
 6. [Tools](#tools)
 7. [Installation](#installation)
@@ -19,14 +19,15 @@
 
 <p>SEO BirdLife is a Spanish NGO with birds as its flag. Its mission is to conserve biodiversity with the participation and involvement of society.
 
-*
+***
 **SEO Bird Life Aventurer@s, is the Aventurer@s club of SEO BirdLife. Focused on teenagers, in which they will learn by playing to identify some plants, birds and insects.<br>
 Our project is an educational and playful website focused on teenagers. It consists of the sighting of birds, plants and insects throughout an excursion. The objective is to understand how climate change is affecting the migratory movements of birds and the natural processes of other species.**
-*
+***
   
 Is the final project of the FullStack Web Development Bootcamp :woman_student:
   
- <p>
+</p>
+  
 
 ## ⚙️Technical requirements
 
