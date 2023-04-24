@@ -45,7 +45,7 @@ class Map extends Component {
     render() {
         return (
             <>
-                <div className="d-flex justify-content-around encabezadoGeneral">
+                <div className="d-flex justify-content-around encabezadoGeneral mt-5">
                     <img src={location} id="locationL" />
                     <h1>Mi ubicación actual</h1>
                     <img src={location} id="locationR" />

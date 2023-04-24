@@ -158,7 +158,7 @@ function Insects() {
                 </div>
                 <h2 className="pb-2 text-center mt-5">Por último envía todos los insectos que has visto</h2>
                 <div className="d-flex justify-content-center mt-3">
-                    <a href={"#butterflyR"}
+                    <a href={"#finish"}
                         className="btnb"
                         role="button"
                         data-bs-toggle="button"
@@ -167,7 +167,7 @@ function Insects() {
                     </a>
                 </div>
 
-                <h2 className="pb-2 text-end mt-5">Puedes terminar tu aventura</h2>
+                <h2 id="finish" className="pb-2 text-end mt-5">Puedes terminar tu aventura</h2>
                 <div class="d-flex justify-content-end">
                     <a href={"#"}
                         className="btnf"
