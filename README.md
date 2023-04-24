@@ -10,10 +10,11 @@
 2. [Technical requirements](#technical-requirements) 
 3. [Team members](#team-members)
 4. [Design](#design)
-5. [Technologies](#technologies)
-6. [Tools](#tools)
-7. [Installation](#installation)
-8. [Tests](#tests)
+5. [Figma](#figma)
+6. [Technologies](#technologies)
+7. [Tools](#tools)
+8. [Installation](#installation)
+9. [Tests](#tests)
 
 ## 🦜 Description <a name = "description"></a>
 
@@ -29,7 +30,7 @@ Is the final project of the FullStack Web Development Bootcamp :woman_student:
 </p>
   
 
-## ⚙️Technical requirements
+## ⚙️Technical requirements <a name = "technical-requirements"></a>
 
 - It MUST be done under the Scrum framework
 - You MUST configure different different roles: admin and user
@@ -45,16 +46,16 @@ Is the final project of the FullStack Web Development Bootcamp :woman_student:
 [<img src="https://avatars.githubusercontent.com/u/116807861?v=4" width=115><br><sub>Ana Delgado - Scrum Master, Developer </sub>](https://github.com/anadelccc)| [<img src="https://avatars.githubusercontent.com/u/117035764?v=4" width=115><br><sub>Marian García - Product Owner, Developer</sub>](https://github.com/Marian4gc)|[<img src="https://avatars.githubusercontent.com/u/85337087?v=4" width=115><br><sub>Belén Zumalacarregui - Developer</sub>](https://github.com/belenz77) |[<img src="https://avatars.githubusercontent.com/u/105303985?v=4" width=115><br><sub>Micaela Huertas - Developer</sub>](https://github.com/hmicae) | [<img src="https://avatars.githubusercontent.com/u/101136933?v=4" width=115><br><sub>Gema Adame - Developer</sub>](https://github.com/GemaAdeAdame)|
 | :---: | :---: | :---: |  :---: |  :---: |
 
-## :art: Design
+## :art: Design <a name = "design"></a>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/117035764/233983380-bb55cd97-a41f-4eae-94df-008d6c90742d.png" width="20%" />
   <img src="https://user-images.githubusercontent.com/117035764/233983405-466ea2eb-1f39-4855-a16f-7abfa69a986a.png" width="50%" />
   <img src="https://user-images.githubusercontent.com/117035764/233983432-d77aa74f-93fc-4ed4-8a83-8a9aa7184c20.png" width="20%" />
 </div>
 
+## ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) Figma <a name = "figma"></a> 
 
-
-
+Look at our design👉https://www.figma.com/file/AKaJDdIityg8OFTg29KdMv/SEOBIRDLIFE?node-id=1-4&t=SXy9glp6fhplWujg-0
 
 ## :computer: Technologies <a name = "technologies"></a>
 
@@ -75,14 +76,14 @@ Is the final project of the FullStack Web Development Bootcamp :woman_student:
 - ![Panther](https://img.shields.io/badge/Symfony_Panther-%233775A9.svg?style=for-the-badge&logo=symfony&logoColor=white)
 - ![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=jest&logoColor=white)
 
-## :hammer: Tools
+## :hammer: Tools <a name = "tools"></a>
 
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) [![Visual Studio Code](https://img.shields.io/badge/VSC-%231572B6.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Xampp](https://img.shields.io/badge/Xampp-F37623?style=for-the-badge&logo=xampp&logoColor=white) ![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white) ![PHP MyAdmin](https://img.shields.io/badge/phpMyAdmin-%2300f.svg?style=for-the-badge&logo=phpMyAdmin&logoColor=white) ![CodePen](https://img.shields.io/badge/CodePen-%23000000.svg?style=for-the-badge&logo=CodePen&logoColor=white)
 ![Flaticon](https://img.shields.io/badge/Flaticon-00AEEF?style=for-the-badge&logo=Flaticon&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-0052CC.svg?style=for-the-badge&logo=Trello&logoColor=white)
 
 
 
-## :link: Installation
+## :link: Installation <a name = "installation"></a>
 
 * First of all, you will need to clone this repository.
 ```
@@ -121,7 +122,7 @@ npm start
 
 
 
-##	:mag: Tests
+##	:mag: Tests <a name = "tests"></a>
 
 
 * Navigate to the frontend folder.
