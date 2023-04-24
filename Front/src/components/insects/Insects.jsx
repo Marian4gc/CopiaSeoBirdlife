@@ -60,6 +60,13 @@ function Insects() {
         // console.log("JSON.stringify(selectedBirdsData):", jsonData);
 
         sendData(jsonData);
+        Swal.fire({
+            icon: 'success',
+            title: '¡Gracias!',
+            text: 'Has enviado los insectos'
+        }).then(() => {
+            window.location.href = '#finish';
+        });
     };
 
     const finish = () => {
