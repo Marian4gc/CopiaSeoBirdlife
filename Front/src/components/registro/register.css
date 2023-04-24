@@ -53,10 +53,25 @@ h1 {
     }
 
     #bird2 {
-        width: 30%
+        width: 40%
     }
 }
 
 .mt-7 {
     margin-top: 7rem !important;
+}
+
+#secRegister .avisoDatos{ font-size: 0.75rem; padding-top: 12px;}
+
+#bird1, #bird2{
+    width: 20%;
+    height: 13%;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#secRegister .avisoDatos { 
+    font-size: 0.75rem; 
+    padding-top: 12px;
 }

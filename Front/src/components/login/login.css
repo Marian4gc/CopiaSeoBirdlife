@@ -1,28 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
 * {
- font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-#secLogin, #secRegister{ display: block !important;  background: #fff;}
-#secLogin h1, #secRegister h1{ text-align: center;}
-#secLogin::before, #secRegister::before{  background:none;}
+#secLogin,
+#secRegister {
+    display: block !important;
+    background: #fff;
+}
 
-    h1, h2, h3,h4,h5,h6{font-family: 'Chewy', cursive;}
-    h1{margin-bottom: 5%;}
-    .box-fichaje{ justify-content: center; }
-    .btnAzul{ background: #1C9BD5; color: white; border: none; padding: 7px; margin: 12px 0 50px 0;}
-    @media (max-width: 767px) {
-        /* Estilos que se aplicarán en dispositivos con ancho de pantalla máximo de 767px (por ejemplo, dispositivos móviles) */
-        /* Aquí puedes colocar tus estilos para dispositivos móviles */
-        #bird1{display: none;}
-        #bird2{width:30%}
-        
-        }
+#secLogin h1,
+#secRegister h1 {
+    text-align: center;
+}
+
+#secLogin::before,
+#secRegister::before {
+    background: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Chewy', cursive;
+}
+
+h1 {
+    margin-bottom: 5%;
+}
+
+.box-fichaje {
+    justify-content: center;
+}
+
+.btnAzul {
+    background: #1C9BD5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    margin: 12px 0 50px 0;
+}
+
+.greenbtn {
+    background-color: #6BC047;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.greenbtn:hover {
+    background-color: #1C9BD5;
+    color: white;
+}
+
+.btnAzul:hover {
+    background: #6BC047;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+
+    #bird1 {
+        display: none;
+    }
+
+    #bird2 {
+        width: 40%
+    }
+
+}
 
 .success h2 {
     width: 100%;
 }
 
 .mt-7 {
-    margin-top: 7rem!important;
+    margin-top: 7rem !important;
 }

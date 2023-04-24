@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import axios from '../../api/axios'
 import Logo from '../images/logoAventurero.png';
-import GolondrinaL from '../images/golondrinaLeft.png';
-import GolondrinaR from '../images/golondrinaRight.png';
+import GolondrinaR from '../images/golondrinaLeft.svg';
+import GolondrinaL from '../images/golondrinaRight.svg';
 import './register.css';
 import Swal from 'sweetalert2';
 
@@ -77,7 +77,7 @@ function Register() {
                                     minLength={3}
                                 />
 
-                                <label htmlFor='password' className="form-label">Contraseña</label>
+                                <label htmlFor='password' className="form-label mt-3">Contraseña</label>
                                 <input
                                     type='password'
                                     id='password'
@@ -87,8 +87,15 @@ function Register() {
                                     className='form-control'
                                     minLength={6}
                                 />
+                                <div>
+                                    <p className='avisoDatos'>Protección de datos personales. <br/>
+                                        Utilizaremos sus datos para gestionar la inscripción como aventurero, y realizar análisis estadísticos. </p>
+                                    <input type={'checkbox'} required /> Acepto el tratamiento de datos para gestionar la inscripción como aventurero.
+                                </div>
+
+
                                 <div className='d-flex container justify-content-center'>
-                                    <button className='mt-3 btnAzul'>Registrarse</button>
+                                    <button className='mt-5 btnAzul'>Registrarse</button>
                                 </div>
                             </form>
                             <p className='text-center'>Si ya estás registrado pasa a:</p>

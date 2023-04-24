@@ -2,7 +2,7 @@
 
 
 :root {
-    --primary: #094b65;   
+    --primary: #094b65;
 }
 
 * {
@@ -40,7 +40,8 @@ section::before {
     z-index: 10;
 }
 
-section #bird1, section #bird2 {
+section #birdHome1,
+section #birdHome2 {
     position: absolute;
     top: 0px;
     left: 0;
@@ -49,6 +50,7 @@ section #bird1, section #bird2 {
     object-fit: contain;
     pointer-events: none;
 }
+
 section img {
     position: absolute;
     top: 0px;
@@ -100,39 +102,109 @@ section #text {
 }
 
 .sec p {
-    
+
     color: #fff;
     font-weight: 200;
     line-height: 30px;
     padding: 12px 0;
 }
+
 /* .pasos img{ width: 75%;} */
 
 
-.cardIndex{ width: 30%; gap:3%;}
-#bird1, #bird2{ z-index: 100;}
-#logo{ width: 100%;}
+.cardIndex {
+    width: 30%;
+    gap: 3%;
+}
+
+#birdHome1,
+#birdHome2 {
+    z-index: 100;
+}
+
+#logo {
+    width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
-    #logo{ width: 50%;}
-    .pasos{ display: flex; flex-wrap: wrap; gap:2%; justify-content: center; width:100%;}
-    .pasos div{     margin: 0 auto;
+    #logo {
+        width: 50%;
+    }
+
+    .pasos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pasos div {
+        margin: 0 auto;
         align-items: center;
         justify-content: center;
         justify-items: center;
-        display: grid;}
+        display: grid;
+    }
 }
-#text h2{ font-size: 3rem; font-weight: bold; color:#1C9BD5;    
+
+#text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1C9BD5;
 
     font-weight: 700;
-    text-shadow: 2px 5px 0 #faf6fe;  }
-#text #logo{ position: relative; z-index: 1000;}
-.pasos{ display: flex; flex-wrap: wrap; gap:2%; justify-content: space-between; width:100%;}
-.pasos div{    display: grid;     justify-items: center;  }
-p{    font-size: 1.2rem;}
-h3{ color: white; text-align: center;}
-.greenbtn{ background-color:#6BC047; color: white; padding: 12px; font-size: 1.2rem; align-items: center;}
-.containerFlex{      display: flex;
+    text-shadow: 2px 5px 0 #faf6fe;
+}
+
+#text #logo {
+    position: relative;
+    z-index: 1000;
+}
+
+.pasos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pasos div {
+    display: grid;
+    justify-items: center;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+.greenbtn {
+    background-color: #6BC047;
+    color: white;
+    padding: 12px;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.containerFlex {
+    display: flex;
     align-items: center;
     width: 100%;
-    justify-content: center; padding: 25px 0;}
-    h1, h2, h3,h4,h5,h6{font-family: 'Chewy', cursive;}
+    justify-content: center;
+    padding: 25px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Chewy', cursive;
+}

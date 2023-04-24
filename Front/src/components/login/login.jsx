@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import axios from '../../api/axios';
 import './login.css';
 import Logo from '../images/logoAventurero.png';
-import GolondrinaL from '../images/golondrinaLeft.png';
-import GolondrinaR from '../images/golondrinaRight.png';
+import GolondrinaR from '../images/golondrinaLeft.svg';
+import GolondrinaL from '../images/golondrinaRight.svg';
 import Swal from 'sweetalert2';
 
 const LOGIN_URL = '/api/login_check';
@@ -75,7 +75,7 @@ function Login() {
     return (
         <div className='d-flex container justify-content-center'>
             <div className=''>
-                <header>
+                <header className='d-flex justify-content-center'>
 
                     <img src={GolondrinaL} id="bird1" />
                     <img src={Logo} />
@@ -107,7 +107,7 @@ function Login() {
                                     className='form-control'
                                 />
 
-                                <label htmlFor='password' className="form-label">Contraseña</label>
+                                <label htmlFor='password' className="form-label mt-3">Contraseña</label>
                                 <input
                                     type='password'
                                     id='password'

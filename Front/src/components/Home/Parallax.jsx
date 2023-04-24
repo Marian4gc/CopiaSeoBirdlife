@@ -12,20 +12,18 @@ function Parallax() {
 
   useEffect(() => {
     const text = document.getElementById("text");
-    const bird1 = document.getElementById("bird1");
-    const bird2 = document.getElementById("bird2");
+    const birdHome1 = document.getElementById("birdHome1");
+    const birdHome2 = document.getElementById("birdHome2");
 
 
     function handleScroll() {
       const value = window.scrollY;
 
       text.style.top = `calc(20% - ${value * 0.3}px)`;
-      bird2.style.top = `${value * -1.5}px`;
-      bird2.style.left = `${value * 2}px`;
-      bird1.style.top = `${value * -1.5}px`;
-      bird1.style.left = `${value * -5}px`;
-
-
+      birdHome2.style.top = `${value * -1.5}px`;
+      birdHome2.style.left = `${value * 2}px`;
+      birdHome1.style.top = `${value * -1.5}px`;
+      birdHome1.style.left = `${value * -5}px`;
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -47,8 +45,8 @@ function Parallax() {
           <h2>¡BIENVENID@ <br />AVENTURER@!</h2>
         </div>
 
-        <img src={GolondrinaIzquierda} id="bird1" />
-        <img src={GolondrinaDerecha} id="bird2" />
+        <img src={GolondrinaIzquierda} id="birdHome1" />
+        <img src={GolondrinaDerecha} id="birdHome2" />
 
         <img src={CiudadBosque} id="forest" />
 
