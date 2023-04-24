@@ -26,8 +26,8 @@ function AllData() {
         'Abejaruco europeo': 'Abejaruco europeo',
         'Abubilla común': 'Abubilla común',
         'Ánsar común': 'Ánsar común',
-        'Autillo europeo': 'Autillo europeo',
-        'Avión común': 'Avión común',
+        'Autillo Europeo': 'Autillo Europeo',
+        'Avión Común Occidental': 'Avión Común Occidental',
         'Cigüeña blanca': 'Cigüeña blanca',
         'Codorniz común': 'Codorniz común',
         'Cuco común': 'Cuco común',
@@ -35,21 +35,21 @@ function AllData() {
         'Grulla común': 'Grulla común',
         'Pardela cenicienta': 'Pardela cenicienta',
         'Ruiseñor común': 'Ruiseñor común',
-        'Tortola europea': 'Tortola europea',
+        'Tórtola Europea': 'Tórtola Europea',
         'Vencejo común': 'Vencejo común',
     };
 
     const plantas = {
-        Almendro: 'Almendro',
-        Amapola: 'Amapola',
-        Castaño: 'Castaño',
-        'Jara Pringosa': 'Jara Pringosa',
-        'Plátano de paseo': 'Plátano de paseo',
+        'Almendro': 'Almendro',
+        'Amapola': 'Amapola',
+        'Castaño': 'Castaño',
+        'Jara pringosa': 'Jara pringosa',
+        'Plátano de sombra': 'Plátano de sombra',
     };
 
     const insectos = {
-        Abeja: 'Abeja',
-        Chupaleche: 'Chupaleche',
+        'Abejas': 'Abejas',
+        'Chupaleche': 'Chupaleche',
     };
 
     const avesArr = data.filter((item) => aves[item.name]);
