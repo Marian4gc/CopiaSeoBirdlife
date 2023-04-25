@@ -4,7 +4,7 @@ import Thanks from './components/thanks/Thanks'
 import Song from './components/birds/Song';
 import Home from './components/Home/Home';
 import Insects from './components/insects/Insects';
-import Login from './components/login/Login';
+import Login from './components/login/login';
 
 
 
