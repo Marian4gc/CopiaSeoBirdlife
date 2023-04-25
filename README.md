@@ -59,22 +59,8 @@ Look at our design👉https://www.figma.com/file/AKaJDdIityg8OFTg29KdMv/SEOBIRDL
 
 ## :computer: Technologies <a name = "technologies"></a>
 
-- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
-- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)  
-- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
-- ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-- ![Leaflet](https://img.shields.io/badge/Leaflet-%236ABD69.svg?style=for-the-badge&logo=Leaflet&logoColor=white)
-- ![Cypress](https://img.shields.io/badge/Cypress-%23EFEFEF.svg?style=for-the-badge&logo=Cypress&logoColor=058a5e)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Leaflet](https://img.shields.io/badge/Leaflet-%236ABD69.svg?style=for-the-badge&logo=Leaflet&logoColor=white) ![Cypress](https://img.shields.io/badge/Cypress-%23EFEFEF.svg?style=for-the-badge&logo=Cypress&logoColor=058a5e) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Symfony](https://img.shields.io/badge/Symfony-%233f88c5.svg?style=for-the-badge&logo=symfony&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Axios](https://img.shields.io/badge/Axios-%23232F3E.svg?style=for-the-badge&logo=axios&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white) ![Twig](https://img.shields.io/badge/Twig-%23FFFFFF.svg?style=for-the-badge&logo=Twig&logoColor=green) ![Panther](https://img.shields.io/badge/Symfony_Panther-%233775A9.svg?style=for-the-badge&logo=symfony&logoColor=white) ![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=jest&logoColor=white) [![npm](https://img.shields.io/badge/npm-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
-- ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) 
-- ![Symfony](https://img.shields.io/badge/Symfony-%233f88c5.svg?style=for-the-badge&logo=symfony&logoColor=white)
-- ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) 
-- ![Axios](https://img.shields.io/badge/Axios-%23232F3E.svg?style=for-the-badge&logo=axios&logoColor=white) 
-- ![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=for-the-badge&logo=node.js&logoColor=white)
-- ![Twig](https://img.shields.io/badge/Twig-%23FFFFFF.svg?style=for-the-badge&logo=Twig&logoColor=green)
-- ![Panther](https://img.shields.io/badge/Symfony_Panther-%233775A9.svg?style=for-the-badge&logo=symfony&logoColor=white)
-- ![Jest](https://img.shields.io/badge/Jest-%23C21325.svg?style=for-the-badge&logo=jest&logoColor=white)
 
 ## :hammer: Tools <a name = "tools"></a>
 
@@ -97,7 +83,7 @@ cd back
 ```  
 * Run this command to download the packages you need for symfony
 ``` 
-composer install
+composer install --ignore-platform-req=ext-zip
 ```   
 * Also run this command to update the database 
 ```
@@ -107,9 +93,12 @@ php bin/console doctrine:schema:update --force
 ```
 cd front
 ```
-* Run this command to download the packages you need for React
+* Run the following commands to download the packages you need for React
 ```
 npm install
+```
+```
+npm install jwt-decode
 ```
 * Also run this to see the backend
 ```
