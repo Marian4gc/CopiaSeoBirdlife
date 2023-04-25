@@ -83,13 +83,6 @@ describe('Login', () => {
     fireEvent.change(screen.getByLabelText('Contraseña'), { target: { value: 'testpassword' } });
     fireEvent.click(screen.getByText('Entrar'));
 
-  //   // // Wait for success message to appear
-  //   await screen.findByText('¡Bienvenid@, testuser!');
-
-  //   // Ensure login details are stored in localStorage
-  //   expect(window.localStorage.getItem('loggedAppUser')).toEqual('some-token');
-  //   expect(JSON.parse(window.localStorage.getItem('name'))).toEqual({ username: 'testuser' });
-  //   expect(window.localStorage.getItem('role')).toEqual('ROLE_USER');
   });
 
   test('unsuccessful login', async () => {
