@@ -66,7 +66,7 @@ test('renders a button Registrarse', () => {
 // comprobar que el login funciona correctamente simulando un login correcto y otro incorrecto
 describe('Login', () => {
   test('successful login', async () => {
-    // Mock successful login response
+
     const loginResponse = {
       data: {
         token: 'some-token'
@@ -78,7 +78,6 @@ describe('Login', () => {
 
     render(<Login />);
 
-    // Fill out and submit login form
     fireEvent.change(screen.getByLabelText('Usuario'), { target: { value: 'testuser' } });
     fireEvent.change(screen.getByLabelText('Contraseña'), { target: { value: 'testpassword' } });
     fireEvent.click(screen.getByText('Entrar'));
@@ -86,20 +85,20 @@ describe('Login', () => {
   });
 
   test('unsuccessful login', async () => {
-    // Mock unsuccessful login response
+
     jest.spyOn(global, 'fetch').mockRejectedValueOnce(new Error());
 
     render(<Login />);
 
-    // Fill out and submit login form
+
     fireEvent.change(screen.getByLabelText('Usuario'), { target: { value: 'invaliduser' } });
     fireEvent.change(screen.getByLabelText('Contraseña'), { target: { value: 'invalidpassword' } });
     fireEvent.click(screen.getByText('Entrar'));
 
-    // Wait for error message to appear
+
     await screen.findByText('Comprueba si está bien escrito tu usuario y contraseña');
 
-    // Ensure login details are not stored in localStorage
+
     expect(window.localStorage.getItem('loggedAppUser')).toBeNull();
     expect(window.localStorage.getItem('name')).toBeNull();
     expect(window.localStorage.getItem('role')).toBeNull();

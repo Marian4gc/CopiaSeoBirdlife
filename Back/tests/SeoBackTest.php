@@ -20,7 +20,7 @@ class SeoBackTest extends PantherTestCase
         $client = static::createPantherClient();
         $crawler = $client->request('GET', '/birds');
 
-        $this->assertSelectorTextContains('h1', 'Birds index');
+        $this->assertSelectorTextContains('h1', 'Indice de Aves');
     }
 
     public function testButtonClick()
