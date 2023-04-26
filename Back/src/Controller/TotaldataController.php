@@ -21,15 +21,15 @@ class TotaldataController extends AbstractController
     {
         $data = json_decode($request->getContent(), true);
 
-        //Verificar si los datos enviados son válidos
+
         if (!isset($data) || !is_array($data) || count($data) === 0) {
             return $this->json(['error' => 'Datos inválidos'], $status = 400, $headers = ['Access-Control-Allow-Origin'=>'*']);
         }
         
-          // Obtener el usuario autenticado
+
             $user = $this->getUser();
 
-    // Recorrer la lista de pájaros
+
         
     foreach ($data['birds'] as $birdData) {
         $name = $birdData['name'];
@@ -46,7 +46,7 @@ class TotaldataController extends AbstractController
     $entityManager->persist($bird);
     $entityManager->flush();
 
-        //Obtener todos los datos actualizados
+
 
         $post = [];
 
@@ -65,13 +65,13 @@ class TotaldataController extends AbstractController
     {
         $data = json_decode($request->getContent(), true);
 
-        //Verificar si los datos enviados son válidos
+
         if (!isset($data) || !is_array($data) || count($data) === 0) {
             return $this->json(['error' => 'Datos inválidos'], $status = 400, $headers = ['Access-Control-Allow-Origin'=>'*']);
         }
 
 
-    // Recorrer la lista de pájaros
+
 
     foreach ($data['plants'] as $plantData) {
         $name = $plantData['name'];
@@ -84,7 +84,7 @@ class TotaldataController extends AbstractController
     $entityManager->persist($bird);
     $entityManager->flush();
 
-        //Obtener todos los datos actualizados
+
 
         $post = [];
 
@@ -103,13 +103,13 @@ class TotaldataController extends AbstractController
     {
         $data = json_decode($request->getContent(), true);
 
-        //Verificar si los datos enviados son válidos
+
         if (!isset($data) || !is_array($data) || count($data) === 0) {
             return $this->json(['error' => 'Datos inválidos'], $status = 400, $headers = ['Access-Control-Allow-Origin'=>'*']);
         }
 
 
-    // Recorrer la lista de pájaros
+
 
     foreach ($data['insects'] as $insectData) {
         $name = $insectData['name'];
@@ -122,7 +122,7 @@ class TotaldataController extends AbstractController
     $entityManager->persist($insect);
     $entityManager->flush();
 
-        //Obtener todos los datos actualizados
+
 
         $post = [];
 
